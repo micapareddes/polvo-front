@@ -285,8 +285,14 @@ export async function Step2Page() {
     const perguntas = perguntasRascunho || perguntasAlteradas
     if (perguntas) {
         const perguntasContainer = form.querySelectorAll('.pergunta-container')
+        console.log('perguntas container: ',perguntasContainer); 
+
         perguntasContainer.forEach((container) => {
+            console.log('pergunta container: ',container); 
+            
             const pergunta = container.querySelector('.pergunta')
+            console.log('pergunta', pergunta);
+            
             const correta = container.querySelector('.correta')
             const incorretas = container.querySelectorAll('.incorreta')
             const incorreta1 = incorretas[0]
