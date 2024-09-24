@@ -8,7 +8,7 @@ export function TooltipInfo({ message='Esta é uma mensagem informativa.' }) {
     infoButton.type = 'button'
     container.className = 'relative w-full'
 
-    infoIcon.src = '/frontend/src/img/icones/question.svg'
+    infoIcon.src = '/src/img/icones/question.svg'
     infoIcon.alt = 'Ícone de pergunta arredondada e cinza.'
 
     infoMessage.textContent = message

@@ -1,15 +1,15 @@
 // Functions
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
 
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { PerguntaRespostaGabarito } from '/frontend/src/components/pergunta-resposta-gabarito.js'
-import { QuestionSidecard } from '/frontend/src/components/sidecard.js'
+import { Heading } from '/src/components/heading.js'
+import { PerguntaRespostaGabarito } from '/src/components/pergunta-resposta-gabarito.js'
+import { QuestionSidecard } from '/src/components/sidecard.js'
 import { SidebarProfessor } from "../../components/sidebar-professor.js"
 
 async function GabaritoPage() {

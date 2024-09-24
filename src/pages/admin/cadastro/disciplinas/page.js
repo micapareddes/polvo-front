@@ -1,19 +1,19 @@
 // Functions
-import { API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { parseProfessores } from '/frontend/src/functions/parseProfessores.js'
-import { cadastroDisciplinaValidation } from '/frontend/src/validations/cadastroDisciplinaValidation.js'
+import { API_ENDPOINTS } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { parseProfessores } from '/src/functions/parseProfessores.js'
+import { cadastroDisciplinaValidation } from '/src/validations/cadastroDisciplinaValidation.js'
 
 // Components
-import { SidebarAdmin } from '/frontend/src/pages/admin/components/sidebar-admin.js'
-import { Heading } from '/frontend/src/components/heading.js'
-import { Button } from '/frontend/src/components/button.js'
-import { TextInput } from '/frontend/src/components/text-input.js'
-import { Select } from '/frontend/src/components/select.js'
-import { SuccessToaster, ErrorToaster, openToaster, closeToaster } from '/frontend/src/components/toaster.js'
-import { openDialog, AlertDialog } from '/frontend/src/components/dialog.js'
-import { ErrorMessage } from '/frontend/src/components/error-message.js'
+import { SidebarAdmin } from '/src/pages/admin/components/sidebar-admin.js'
+import { Heading } from '/src/components/heading.js'
+import { Button } from '/src/components/button.js'
+import { TextInput } from '/src/components/text-input.js'
+import { Select } from '/src/components/select.js'
+import { SuccessToaster, ErrorToaster, openToaster, closeToaster } from '/src/components/toaster.js'
+import { openDialog, AlertDialog } from '/src/components/dialog.js'
+import { ErrorMessage } from '/src/components/error-message.js'
 
 function handleChange(event) {
     const form = event.target.form

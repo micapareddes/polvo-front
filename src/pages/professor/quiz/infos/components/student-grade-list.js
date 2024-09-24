@@ -1,6 +1,6 @@
-import { ListItemBoxWithTitle } from "/frontend/src/components/list.js"
-import { Button } from '/frontend/src/components/button.js'
-import { Text } from '/frontend/src/components/fonts.js'
+import { ListItemBoxWithTitle } from "/src/components/list.js"
+import { Button } from '/src/components/button.js'
+import { Text } from '/src/components/fonts.js'
 
 export function StudentGradeListItem({ studentName='Nome', answerLink, grade='x' }) {
     const container = document.createElement('div')

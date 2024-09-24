@@ -1,26 +1,26 @@
 // Functions
-import { API_ENDPOINTS, ROUTES } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { parseProfessores } from '/frontend/src/functions/parseProfessores.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
-import { removeOriginalValuesFromStorage } from '/frontend/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
-import { saveOriginalValues } from '/frontend/src/pages/admin/functions/saveOriginalValues.js'
-import { obtainOriginalValuesFromStorage } from '/frontend/src/pages/admin/functions/obtainOriginalValuesFromStorage.js'
-import { cadastroDisciplinaValidation } from '/frontend/src/validations/cadastroDisciplinaValidation.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
+import { API_ENDPOINTS, ROUTES } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { parseProfessores } from '/src/functions/parseProfessores.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
+import { removeOriginalValuesFromStorage } from '/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
+import { saveOriginalValues } from '/src/pages/admin/functions/saveOriginalValues.js'
+import { obtainOriginalValuesFromStorage } from '/src/pages/admin/functions/obtainOriginalValuesFromStorage.js'
+import { cadastroDisciplinaValidation } from '/src/validations/cadastroDisciplinaValidation.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { SidebarAdmin } from '/frontend/src/pages/admin/components/sidebar-admin.js'
-import { Button } from '/frontend/src/components/button.js'
-import { TextInput } from '/frontend/src/components/text-input.js'
-import { Select } from '/frontend/src/components/select.js'
-import { openDialog, AlertDialog } from '/frontend/src/components/dialog.js'
-import { InfoToaster, openToaster, closeToaster } from '/frontend/src/components/toaster.js'
-import { ErrorMessage } from '/frontend/src/components/error-message.js'
+import { Heading } from '/src/components/heading.js'
+import { SidebarAdmin } from '/src/pages/admin/components/sidebar-admin.js'
+import { Button } from '/src/components/button.js'
+import { TextInput } from '/src/components/text-input.js'
+import { Select } from '/src/components/select.js'
+import { openDialog, AlertDialog } from '/src/components/dialog.js'
+import { InfoToaster, openToaster, closeToaster } from '/src/components/toaster.js'
+import { ErrorMessage } from '/src/components/error-message.js'
 import { QuizTable } from './components/quiz-table.js'
-import { Title, Text } from '/frontend/src/components/fonts.js'
+import { Title, Text } from '/src/components/fonts.js'
 
 async function handleSubmit(e) {
     e.preventDefault()
@@ -76,7 +76,7 @@ async function handleSubmit(e) {
         if (error.status === 403) {
             alert('Acesso Proibido')
             localStorage.removeItem('accessToken')
-            navigateTo('/frontend/src/pages/login.html')
+            navigateTo('/src/pages/login.html')
         } else {
             console.log(error);
             alert('Algo deu errado, tente novamente mais tarde...')

@@ -1,6 +1,6 @@
-import { TextInput } from '/frontend/src/components/text-input.js'
-import { PasswordInput } from '/frontend/src/components/password-input.js'
-import { Button } from '/frontend/src/components/button.js'
+import { TextInput } from '/src/components/text-input.js'
+import { PasswordInput } from '/src/components/password-input.js'
+import { Button } from '/src/components/button.js'
 
 export function AuthFormContent() {
     const container = document.createElement('div')

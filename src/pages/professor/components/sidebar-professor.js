@@ -1,5 +1,5 @@
-import { ROUTES } from '/frontend/src/utils/routes.js'
-import { Sidebar } from '/frontend/src/components/sidebar.js'
+import { ROUTES } from '/src/utils/routes.js'
+import { Sidebar } from '/src/components/sidebar.js'
 import { getProfessorDisciplinas } from '../service/getProfessorDisciplinas.js'
 
 const disciplinas = await getProfessorDisciplinas()

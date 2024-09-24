@@ -1,42 +1,42 @@
 import { baseUrl } from "./baseUrl.js"
 
 export const ROUTES = {
-    LOGIN: '/frontend/src/pages/login/index.html',
-    ERROR404: '/frontend/src/pages/404/index.html',
+    LOGIN: '/src/pages/login/index.html',
+    ERROR404: '/src/pages/404/index.html',
     ADMIN: {
-        DASHBOARD: '/frontend/src/pages/admin/dashboard/index.html',
+        DASHBOARD: '/src/pages/admin/dashboard/index.html',
         PAINEL: {
-            DISCIPLINAS: '/frontend/src/pages/admin/painel/disciplinas/index.html',
-            ALUNOS: '/frontend/src/pages/admin/painel/alunos/index.html',
-            PROFESSORES: '/frontend/src/pages/admin/painel/professores/index.html',
+            DISCIPLINAS: '/src/pages/admin/painel/disciplinas/index.html',
+            ALUNOS: '/src/pages/admin/painel/alunos/index.html',
+            PROFESSORES: '/src/pages/admin/painel/professores/index.html',
         },
         CADASTRO: {
-            DISCIPLINAS: '/frontend/src/pages/admin/cadastro/disciplinas/index.html',
-            ALUNOS: '/frontend/src/pages/admin/cadastro/alunos/index.html',
-            PROFESSORES: '/frontend/src/pages/admin/cadastro/professores/index.html',
+            DISCIPLINAS: '/src/pages/admin/cadastro/disciplinas/index.html',
+            ALUNOS: '/src/pages/admin/cadastro/alunos/index.html',
+            PROFESSORES: '/src/pages/admin/cadastro/professores/index.html',
         },
         EDICAO: {
-            DISCIPLINAS: (id) => `/frontend/src/pages/admin/edicao/disciplinas/index.html?id=${id}`,
-            ALUNOS: (id) => `/frontend/src/pages/admin/edicao/alunos/index.html?id=${id}`,
-            PROFESSORES: (id) => `/frontend/src/pages/admin/edicao/professores/index.html?id=${id}`,
-            QUIZZES: (id) => `/frontend/src/pages/admin/edicao/quizzes/index.html?id=${id}`,
+            DISCIPLINAS: (id) => `/src/pages/admin/edicao/disciplinas/index.html?id=${id}`,
+            ALUNOS: (id) => `/src/pages/admin/edicao/alunos/index.html?id=${id}`,
+            PROFESSORES: (id) => `/src/pages/admin/edicao/professores/index.html?id=${id}`,
+            QUIZZES: (id) => `/src/pages/admin/edicao/quizzes/index.html?id=${id}`,
         },
     },
     ALUNO: {
-        DASHBOARD: '/frontend/src/pages/aluno/dashboard/index.html',
-        DISCIPLINA: (id) => `/frontend/src/pages/aluno/disciplina/index.html?id=${id}`,
-        QUIZ: (id) => `/frontend/src/pages/aluno/quiz/index.html?step=1&id=${id}`,
-        GABARITO: ({ quiz, tentativa }) => `/frontend/src/pages/aluno/gabarito/index.html?quiz=${quiz}&tentativa=${tentativa}`,
+        DASHBOARD: '/src/pages/aluno/dashboard/index.html',
+        DISCIPLINA: (id) => `/src/pages/aluno/disciplina/index.html?id=${id}`,
+        QUIZ: (id) => `/src/pages/aluno/quiz/index.html?step=1&id=${id}`,
+        GABARITO: ({ quiz, tentativa }) => `/src/pages/aluno/gabarito/index.html?quiz=${quiz}&tentativa=${tentativa}`,
     },
     PROFESSOR: {
-        DASHBOARD: '/frontend/src/pages/professor/dashboard/index.html',
-        DISCIPLINA: (id) => `/frontend/src/pages/professor/disciplina/index.html?id=${id}`,
+        DASHBOARD: '/src/pages/professor/dashboard/index.html',
+        DISCIPLINA: (id) => `/src/pages/professor/disciplina/index.html?id=${id}`,
         QUIZ: {
-            INFO: (id) => `/frontend/src/pages/professor/quiz/infos/index.html?id=${id}`,
-            CREATE: '/frontend/src/pages/professor/quiz/create/index.html?step=1',
-            EDIT: (id) => `/frontend/src/pages/professor/quiz/edicao/index.html?id=${id}`,
-            RASCUNHO: (id) => `/frontend/src/pages/professor/quiz/create/index.html?step=1&id=${id}`,
-            GABARITO: ({ quiz, tentativa }) => `/frontend/src/pages/professor/quiz/gabarito/index.html?quiz=${quiz}&tentativa=${tentativa}`,
+            INFO: (id) => `/src/pages/professor/quiz/infos/index.html?id=${id}`,
+            CREATE: '/src/pages/professor/quiz/create/index.html?step=1',
+            EDIT: (id) => `/src/pages/professor/quiz/edicao/index.html?id=${id}`,
+            RASCUNHO: (id) => `/src/pages/professor/quiz/create/index.html?step=1&id=${id}`,
+            GABARITO: ({ quiz, tentativa }) => `/src/pages/professor/quiz/gabarito/index.html?quiz=${quiz}&tentativa=${tentativa}`,
         }
     },
 }

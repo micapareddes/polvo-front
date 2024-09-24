@@ -1,8 +1,8 @@
-import { formatMinutesToHs } from "/frontend/src/functions/formatMinutesToHs.js"
-import { TextInput } from '/frontend/src/components/text-input.js'
-import { Select } from '/frontend/src/components/select.js'
-import { DataInput } from '/frontend/src/components/data-input.js'
-import { TextArea } from '/frontend/src/components/text-area.js'
+import { formatMinutesToHs } from "/src/functions/formatMinutesToHs.js"
+import { TextInput } from '/src/components/text-input.js'
+import { Select } from '/src/components/select.js'
+import { DataInput } from '/src/components/data-input.js'
+import { TextArea } from '/src/components/text-area.js'
 
 export function InfoQuizForm(disciplinas=[]) {
     const container = document.createElement('div')

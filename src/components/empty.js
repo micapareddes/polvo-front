@@ -5,7 +5,7 @@ export function Empty(message) {
 
     container.className = 'flex h-screen flex-col items-center justify-center'
 
-    icon.src = '/frontend/src/img/no-data.svg'
+    icon.src = '/src/img/no-data.svg'
     icon.alt = 'Duas pranchetas sobrepostas com clipes lilas.'
     icon.className = 'w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96'
 

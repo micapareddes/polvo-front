@@ -1,18 +1,18 @@
 // Functions
-import { API_ENDPOINTS, ROUTES } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
-import { editQuizValidation } from '/frontend/src/validations/editQuizValidation.js'
+import { API_ENDPOINTS, ROUTES } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
+import { editQuizValidation } from '/src/validations/editQuizValidation.js'
 
 // Components
-import { SidebarAdmin } from '/frontend/src/pages/admin/components/sidebar-admin.js'
-import { Heading } from '/frontend/src/components/heading.js'
-import { Button } from '/frontend/src/components/button.js'
-import { InfoQuizForm } from '/frontend/src/components/info-quiz-form.js'
-import { Question } from '/frontend/src/components/question.js'
-import { openToaster, closeToaster, ErrorToaster } from '/frontend/src/components/toaster.js'
+import { SidebarAdmin } from '/src/pages/admin/components/sidebar-admin.js'
+import { Heading } from '/src/components/heading.js'
+import { Button } from '/src/components/button.js'
+import { InfoQuizForm } from '/src/components/info-quiz-form.js'
+import { Question } from '/src/components/question.js'
+import { openToaster, closeToaster, ErrorToaster } from '/src/components/toaster.js'
 
 async function handleSubmit(e) { //TODO: Validação de erro e form mudou
     e.preventDefault()

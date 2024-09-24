@@ -1,5 +1,5 @@
-import { ListItemBoxWithTitle } from '/frontend/src/components/list.js'
-import { Button } from '/frontend/src/components/button.js'
+import { ListItemBoxWithTitle } from '/src/components/list.js'
+import { Button } from '/src/components/button.js'
 
 export function RegisterListItem({ name='Text', registerLink, linkPainel }) {
     const container = document.createElement('div')

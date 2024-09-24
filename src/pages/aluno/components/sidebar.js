@@ -1,6 +1,6 @@
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { Sidebar } from '/frontend/src/components/sidebar.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { Sidebar } from '/src/components/sidebar.js'
 
 const disciplinas = await makeRequest({
     url: API_ENDPOINTS.GET_DISCIPLINAS_ALUNO, 

@@ -1,4 +1,4 @@
-import { getCurrentDate } from '/frontend/src/functions/getCurrentDate.js'
+import { getCurrentDate } from '/src/functions/getCurrentDate.js'
 
 export function infoQuizValidation(data) {
     const name = data.nome.length >= 3

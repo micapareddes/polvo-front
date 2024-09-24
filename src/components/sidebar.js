@@ -1,7 +1,7 @@
 import { AlertDialog, openDialog } from './dialog.js'
 import { LogoLado } from './logo-lado.js'
 import { signOut } from '../auth/singOut.js'
-import { removeOriginalValuesFromStorage } from '/frontend/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
+import { removeOriginalValuesFromStorage } from '/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
 
 function Item({ 
     phosphor='question', title, link=null, onClick=null, accordion=false, accordionOptions=[], active=false 
@@ -122,7 +122,7 @@ export function Sidebar({ size='lg', items=[], changePassword=true }) {
 
     div.className = 'flex flex-col w-full md:h-screen'
 
-    smallLogo.src = '/frontend/src/img/logo-icon.svg'
+    smallLogo.src = '/src/img/logo-icon.svg'
     smallLogo.alt = 'Logo icone Polvo Branca'
     smallLogo.className = 'ml-9 md:pt-12'
     smallLogo.height = 21

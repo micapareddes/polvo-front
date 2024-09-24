@@ -1,17 +1,17 @@
 // Functions
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { SidebarProfessor } from '/frontend/src/pages/professor/components/sidebar-professor.js'
-import { Empty } from '/frontend/src/components/empty.js'
-import { Button } from '/frontend/src/components/button.js'
-import { ListItemBoxWithTitle } from '/frontend/src/components/list.js'
-import { Title } from '/frontend/src/components/fonts.js'
-import { openToaster, closeToaster, SuccessToaster } from '/frontend/src/components/toaster.js'
+import { Heading } from '/src/components/heading.js'
+import { SidebarProfessor } from '/src/pages/professor/components/sidebar-professor.js'
+import { Empty } from '/src/components/empty.js'
+import { Button } from '/src/components/button.js'
+import { ListItemBoxWithTitle } from '/src/components/list.js'
+import { Title } from '/src/components/fonts.js'
+import { openToaster, closeToaster, SuccessToaster } from '/src/components/toaster.js'
 
 async function DisciplinaPage() {
     try {

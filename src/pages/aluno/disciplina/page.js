@@ -1,13 +1,13 @@
 // Functions
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { SidebarAluno } from '/frontend/src/pages/aluno/components/sidebar.js'
-import { Empty } from '/frontend/src/components/empty.js'
+import { Heading } from '/src/components/heading.js'
+import { SidebarAluno } from '/src/pages/aluno/components/sidebar.js'
+import { Empty } from '/src/components/empty.js'
 import { QuizTable } from '../components/quiz-table.js'
 
 async function PageDashboard() {

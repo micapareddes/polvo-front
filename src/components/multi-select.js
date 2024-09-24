@@ -1,4 +1,4 @@
-import { TooltipInfo } from "/frontend/src/components/tooltip-info.js"
+import { TooltipInfo } from "/src/components/tooltip-info.js"
 
 function selectedItem({ value, name, dataLabel }) {
     const selectedValue = document.createElement('span')

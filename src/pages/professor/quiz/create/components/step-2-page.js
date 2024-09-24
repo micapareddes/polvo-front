@@ -1,15 +1,15 @@
 // Functions
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
-import { perguntasQuizValidation } from '/frontend/src/validations/perguntasQuizValidation.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
+import { perguntasQuizValidation } from '/src/validations/perguntasQuizValidation.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { AlertDialog, openDialog } from '/frontend/src/components/dialog.js'
-import { ErrorToaster, openToaster, closeToaster } from '/frontend/src/components/toaster.js'
-import { Question } from '/frontend/src/components/question.js'
-import { Button } from '/frontend/src/components/button.js'
+import { Heading } from '/src/components/heading.js'
+import { AlertDialog, openDialog } from '/src/components/dialog.js'
+import { ErrorToaster, openToaster, closeToaster } from '/src/components/toaster.js'
+import { Question } from '/src/components/question.js'
+import { Button } from '/src/components/button.js'
 
 async function handleGuardarRascunho() {
     const form = document.querySelector('form')

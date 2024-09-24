@@ -1,19 +1,19 @@
 // Functions
-import { API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { getDisciplinas } from '/frontend/src/pages/admin/service/getDisciplinas.js'
-import { cadastroUserValidation } from '/frontend/src/validations/cadastroUserValidation.js'
+import { API_ENDPOINTS } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { getDisciplinas } from '/src/pages/admin/service/getDisciplinas.js'
+import { cadastroUserValidation } from '/src/validations/cadastroUserValidation.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { SidebarAdmin } from '/frontend/src/pages/admin/components/sidebar-admin.js'
-import { Button } from '/frontend/src/components/button.js'
-import { TextInput } from '/frontend/src/components/text-input.js'
-import { SuccessToaster, ErrorToaster, openToaster, closeToaster } from '/frontend/src/components/toaster.js'
-import { ErrorMessage } from '/frontend/src/components/error-message.js'
-import { openDialog, AlertDialog } from '/frontend/src/components/dialog.js'
-import { MultiSelect } from '/frontend/src/components/multi-select.js'
+import { Heading } from '/src/components/heading.js'
+import { SidebarAdmin } from '/src/pages/admin/components/sidebar-admin.js'
+import { Button } from '/src/components/button.js'
+import { TextInput } from '/src/components/text-input.js'
+import { SuccessToaster, ErrorToaster, openToaster, closeToaster } from '/src/components/toaster.js'
+import { ErrorMessage } from '/src/components/error-message.js'
+import { openDialog, AlertDialog } from '/src/components/dialog.js'
+import { MultiSelect } from '/src/components/multi-select.js'
 
 
 async function handleSubmit(event) {

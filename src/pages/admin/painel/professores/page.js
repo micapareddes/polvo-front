@@ -1,17 +1,17 @@
 // Functions
-import { API_ENDPOINTS, ROUTES } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
-import { removeOriginalValuesFromStorage } from '/frontend/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
+import { API_ENDPOINTS, ROUTES } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
+import { removeOriginalValuesFromStorage } from '/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
 
 // Components
-import { SidebarAdmin } from '/frontend/src/pages/admin/components/sidebar-admin.js'
-import { Heading } from '/frontend/src/components/heading.js'
+import { SidebarAdmin } from '/src/pages/admin/components/sidebar-admin.js'
+import { Heading } from '/src/components/heading.js'
 import { ProfessorTable } from './components/professor-table.js'
-import { Button } from '/frontend/src/components/button.js'
-import { Empty } from '/frontend/src/components/empty.js'
-import { SuccessToaster, openToaster, closeToaster } from '/frontend/src/components/toaster.js'
+import { Button } from '/src/components/button.js'
+import { Empty } from '/src/components/empty.js'
+import { SuccessToaster, openToaster, closeToaster } from '/src/components/toaster.js'
 
 async function ProfessoresPage() {
 try {

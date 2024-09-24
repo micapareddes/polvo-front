@@ -15,10 +15,10 @@ export function PerguntaRespostaGabarito({
         const icon = document.createElement('img')
         const content = document.createElement('p')
         const iconAlternativas = {
-            0: '/frontend/src/img/icones/a.svg',
-            1: '/frontend/src/img/icones/b.svg',
-            2: '/frontend/src/img/icones/c.svg',
-            3: '/frontend/src/img/icones/d.svg',
+            0: '/src/img/icones/a.svg',
+            1: '/src/img/icones/b.svg',
+            2: '/src/img/icones/c.svg',
+            3: '/src/img/icones/d.svg',
         }
         const letra = {
             0: 'a',

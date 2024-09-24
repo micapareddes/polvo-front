@@ -1,13 +1,13 @@
 // Functions
-import { API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { removeOriginalValuesFromStorage } from '/frontend/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
+import { API_ENDPOINTS } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { removeOriginalValuesFromStorage } from '/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { SidebarAdmin, painelItems } from '/frontend/src/pages/admin/components/sidebar-admin.js'
-import { RegisterListItem } from '/frontend/src/pages/admin/dashboard/components/registerListItem.js'
+import { Heading } from '/src/components/heading.js'
+import { SidebarAdmin, painelItems } from '/src/pages/admin/components/sidebar-admin.js'
+import { RegisterListItem } from '/src/pages/admin/dashboard/components/registerListItem.js'
 
 
 async function PageDashboard() {

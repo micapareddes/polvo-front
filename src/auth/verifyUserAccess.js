@@ -1,6 +1,6 @@
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
 
 export async function verifyUserAccess(tipo) {
     const accessToken = localStorage.getItem('accessToken')

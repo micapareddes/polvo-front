@@ -1,8 +1,8 @@
 // Functions
-import { ROUTES } from '/frontend/src/utils/routes.js'
-import { verifyUserAccess } from '/frontend/src/auth/verifyUserAccess.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
+import { ROUTES } from '/src/utils/routes.js'
+import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
 
 // Components
 import { SidebarAluno } from '../components/sidebar.js'

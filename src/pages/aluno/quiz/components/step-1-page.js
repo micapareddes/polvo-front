@@ -1,17 +1,17 @@
 // Functions
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
-import { formatDate } from '/frontend/src/functions/formatDate.js'
-import { getCurrentDate } from '/frontend/src/functions/getCurrentDate.js'
-import { navigateTo } from '/frontend/src/functions/navigateTo.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
+import { formatDate } from '/src/functions/formatDate.js'
+import { getCurrentDate } from '/src/functions/getCurrentDate.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { QuizInfo } from '/frontend/src/components/quiz-info.js'
-import { Title, Text } from '/frontend/src/components/fonts.js'
-import { Button } from '/frontend/src/components/button.js'
+import { Heading } from '/src/components/heading.js'
+import { QuizInfo } from '/src/components/quiz-info.js'
+import { Title, Text } from '/src/components/fonts.js'
+import { Button } from '/src/components/button.js'
 import { AttemptsSidecard } from './attempts-sidecard.js'
-import { openDialog, ActionDialog } from '/frontend/src/components/dialog.js'
+import { openDialog, ActionDialog } from '/src/components/dialog.js'
 
 export async function Step1Page() {
     try {
@@ -74,7 +74,7 @@ export async function Step1Page() {
                                     url: API_ENDPOINTS.EMBARALHA(id),
                                     token: accessToken,
                                 })
-                                navigateTo(`/frontend/src/pages/aluno/quiz/index.html?step=2&id=${respostaId}`)
+                                navigateTo(`/src/pages/aluno/quiz/index.html?step=2&id=${respostaId}`)
                             },
                         })
                     )

@@ -1,11 +1,11 @@
-import { API_ENDPOINTS, ROUTES } from "/frontend/src/utils/routes.js"
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
+import { API_ENDPOINTS, ROUTES } from "/src/utils/routes.js"
+import { makeRequest } from '/src/functions/makeRequest.js'
 
-import { Text } from "/frontend/src/components/fonts.js"
-import { EditRemoveActionButtons } from "/frontend/src/components/edit-remove.js"
-import { TableHead, TableRow } from "/frontend/src/components/table.js"
-import { AlertDialog, openDialog } from '/frontend/src/components/dialog.js'
-import { SuccessToaster, openToaster, closeToaster } from '/frontend/src/components/toaster.js'
+import { Text } from "/src/components/fonts.js"
+import { EditRemoveActionButtons } from "/src/components/edit-remove.js"
+import { TableHead, TableRow } from "/src/components/table.js"
+import { AlertDialog, openDialog } from '/src/components/dialog.js'
+import { SuccessToaster, openToaster, closeToaster } from '/src/components/toaster.js'
 
 export function QuizTable(quizzes) {
     const headerContent = [

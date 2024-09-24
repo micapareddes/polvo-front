@@ -1,6 +1,6 @@
-import { API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { redirectToUserDashboard } from '/frontend/src/functions/redirectToUserDashboard.js'
+import { API_ENDPOINTS } from '/src/utils/routes.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { redirectToUserDashboard } from '/src/functions/redirectToUserDashboard.js'
 
 export async function reqLogin(userData) {
     const { accessToken } = await makeRequest({ 

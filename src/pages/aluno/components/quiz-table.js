@@ -1,9 +1,9 @@
-import { ROUTES } from '/frontend/src/utils/routes.js'
-import { Text } from '/frontend/src/components/fonts.js';
-import { ListItemBoxWithTitle } from '/frontend/src/components/list.js';
-import { Tag } from '/frontend/src/components/tag.js';
-import { formatDate } from '/frontend/src/functions/formatDate.js';
-import { getCurrentDate } from '/frontend/src/functions/getCurrentDate.js';
+import { ROUTES } from '/src/utils/routes.js'
+import { Text } from '/src/components/fonts.js';
+import { ListItemBoxWithTitle } from '/src/components/list.js';
+import { Tag } from '/src/components/tag.js';
+import { formatDate } from '/src/functions/formatDate.js';
+import { getCurrentDate } from '/src/functions/getCurrentDate.js';
 
 const capitalizeFirstLetter = (string) => {
     if (!string) return '';

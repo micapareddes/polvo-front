@@ -1,5 +1,5 @@
-import { SidecardBoxWithTitle } from "/frontend/src/components/sidecard.js"
-import { Button } from '/frontend/src/components/button.js'
+import { SidecardBoxWithTitle } from "/src/components/sidecard.js"
+import { Button } from '/src/components/button.js'
 
 function AttemptItem({ attemptNumber, grade, answerLink, disabledButton=false }) {
     const container = document.createElement('div')

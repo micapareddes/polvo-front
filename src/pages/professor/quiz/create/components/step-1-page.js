@@ -1,20 +1,20 @@
 // Functions
-import { ROUTES, API_ENDPOINTS } from '/frontend/src/utils/routes.js'
-import { infoQuizValidation } from '/frontend/src/validations/infoQuizValidation.js'
+import { ROUTES, API_ENDPOINTS } from '/src/utils/routes.js'
+import { infoQuizValidation } from '/src/validations/infoQuizValidation.js'
 import { getProfessorDisciplinas } from '../../../service/getProfessorDisciplinas.js'
-import { navigateTo} from '/frontend/src/functions/navigateTo.js'
-import { makeRequest } from '/frontend/src/functions/makeRequest.js'
-import { getUrlParam } from '/frontend/src/functions/getUrlParam.js'
+import { navigateTo} from '/src/functions/navigateTo.js'
+import { makeRequest } from '/src/functions/makeRequest.js'
+import { getUrlParam } from '/src/functions/getUrlParam.js'
 
 // Components
-import { Heading } from '/frontend/src/components/heading.js'
-import { AlertDialog, openDialog } from '/frontend/src/components/dialog.js'
-import { TextInput } from '/frontend/src/components/text-input.js'
-import { Select } from '/frontend/src/components/select.js'
-import { DataInput } from '/frontend/src/components/data-input.js'
-import { TextArea } from '/frontend/src/components/text-area.js'
-import { Button } from '/frontend/src/components/button.js'
-import { ErrorMessage } from '/frontend/src/components/error-message.js'
+import { Heading } from '/src/components/heading.js'
+import { AlertDialog, openDialog } from '/src/components/dialog.js'
+import { TextInput } from '/src/components/text-input.js'
+import { Select } from '/src/components/select.js'
+import { DataInput } from '/src/components/data-input.js'
+import { TextArea } from '/src/components/text-area.js'
+import { Button } from '/src/components/button.js'
+import { ErrorMessage } from '/src/components/error-message.js'
 
 async function handleGuardarRascunho() {
     const form = document.getElementById('form')
@@ -217,7 +217,7 @@ function handleCriarPerguntas(e) {
     localStorage.setItem('infos', jsonData)
     localStorage.setItem('step', true)
 
-    navigateTo('/frontend/src/pages/professor/quiz/create/index.html?step=2')
+    navigateTo('/src/pages/professor/quiz/create/index.html?step=2')
 }
 function handleFormChange() {
     const form = document.getElementById('form')

@@ -21,7 +21,7 @@ export function PasswordInput({ className }) {
     label.htmlFor = 'password'
     label.className = 'block'
 
-    eyeIcon.src = '/frontend/src/img/icones/eye.svg'
+    eyeIcon.src = '/src/img/icones/eye.svg'
 
     eyeButton.setAttribute('aria-label', 'Mostrar ou ocultar senha') 
     eyeButton.addEventListener("click", (event) => {
@@ -29,10 +29,10 @@ export function PasswordInput({ className }) {
 
         if (input.type === 'password') {
             input.type = 'text'
-            eyeIcon.src = '/frontend/src/img/icones/eye-slash.svg'
+            eyeIcon.src = '/src/img/icones/eye-slash.svg'
         } else {
             input.type = 'password'
-            eyeIcon.src = '/frontend/src/img/icones/eye.svg'
+            eyeIcon.src = '/src/img/icones/eye.svg'
         }
     })
 

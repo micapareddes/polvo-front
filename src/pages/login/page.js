@@ -1,8 +1,8 @@
-import { checkAndRedirectUser } from '/frontend/src/auth/checkAndRedirectUser.js'
-import { loginFormValidation } from '/frontend/src/validations/loginFormValidation.js'
-import { reqLogin } from '/frontend/src/pages/login/service/login.js'
-import { LoginForm } from '/frontend/src/pages/login/components/login-form.js'
-import { ErrorMessage } from '/frontend/src/components/error-message.js'
+import { checkAndRedirectUser } from '/src/auth/checkAndRedirectUser.js'
+import { loginFormValidation } from '/src/validations/loginFormValidation.js'
+import { reqLogin } from '/src/pages/login/service/login.js'
+import { LoginForm } from '/src/pages/login/components/login-form.js'
+import { ErrorMessage } from '/src/components/error-message.js'
 
 async function handleSubmit(event) {
     event.preventDefault()
