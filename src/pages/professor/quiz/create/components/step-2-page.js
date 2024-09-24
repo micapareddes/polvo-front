@@ -283,12 +283,13 @@ export async function Step2Page() {
     const perguntasAlteradas = JSON.parse(localStorage.getItem('perguntas'))
     const perguntasRascunho = JSON.parse(localStorage.getItem('perguntasRascunho'))
     const perguntas = perguntasRascunho || perguntasAlteradas
-    if (perguntas) {
+    if (perguntas.length > 0) {
         const perguntasContainer = form.querySelectorAll('.pergunta-container')
 
         perguntasContainer.forEach((container) => {
-            const pergunta = container.querySelector('.pergunta')
+            console.log(container);
             
+            const pergunta = container.querySelector('.pergunta')
             const correta = container.querySelector('.correta')
             const incorretas = container.querySelectorAll('.incorreta')
             const incorreta1 = incorretas[0]
