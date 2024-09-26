@@ -17,6 +17,11 @@ async function PageDashboard() {
         const main = document.getElementById('main')
         const loader = document.querySelector('.loader-container')
         const id = getUrlParam('id')
+
+        document.addEventListener("DOMContentLoaded", function() {
+            loader.classList.add('hidden')
+        })
+
         const data = await makeRequest({
             url: API_ENDPOINTS.GET_QUIZ_INFO_BY_DISCIPLINA_ID(id), 
             method:'GET', 
@@ -44,10 +49,6 @@ async function PageDashboard() {
                 QuizTable(quizzes)
             )
         }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            loader.classList.add('hidden')
-        })
     
     } catch (error) {
         console.log(error);

@@ -154,6 +154,11 @@ try {
     const form = document.createElement('form')
     const inputsContainer = document.createElement('div')
     const buttonContainer = document.createElement('div')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     const disciplinasCadastradas = await getDisciplinas()
     const { nome, matricula, email, disciplinas } = await makeRequest({ 
         url: API_ENDPOINTS.GET_PROFESSOR_WITH_DISCIPLINA(id), 
@@ -259,10 +264,6 @@ try {
 
     form.onsubmit = handleSubmit
     form.oninput = handleChange
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 
 } catch (error) { //TODO: Adicionar tratamento de erros
     console.log(error);

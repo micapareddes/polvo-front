@@ -18,6 +18,10 @@ async function PageDashboard() {
     const ul = document.createElement('ul')
 
     root.prepend(SidebarAluno())
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
     
     try {
         const name = await makeRequest( { 
@@ -63,11 +67,6 @@ async function PageDashboard() {
         nav.appendChild(ul)
         main.appendChild(nav)
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
-
 }
 
 PageDashboard()

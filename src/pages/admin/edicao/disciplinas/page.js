@@ -113,6 +113,11 @@ try {
     const buttonContainer = document.createElement('div')
     const contentContainer = document.createElement('div')
     const accessToken = localStorage.getItem('accessToken')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     const professores = await makeRequest( { 
         url: API_ENDPOINTS.GET_PROFESSORES, 
         method:'GET', 
@@ -221,10 +226,6 @@ try {
 
     form.onsubmit = handleSubmit
     form.oninput = handleChange
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
     
 } catch (error) { //TODO: Adicionar tratamento de erros
     console.log(error);

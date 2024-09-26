@@ -16,6 +16,10 @@ async function NovoQuizPage() {
     const root = document.getElementById('root')
     const loader = document.querySelector('.loader-container')
 
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+    
     root.prepend(SidebarProfessor())
     const step = {
         '1': Step1Page,
@@ -23,8 +27,5 @@ async function NovoQuizPage() {
     }
     step[currentStep]()
 
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 }
 NovoQuizPage()

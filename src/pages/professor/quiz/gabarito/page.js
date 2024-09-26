@@ -22,6 +22,10 @@ async function GabaritoPage() {
         const tentativaId = getUrlParam('tentativa')
         if (!tentativaId) navigateTo(ROUTES.ERROR404)
 
+        document.addEventListener("DOMContentLoaded", function() {
+            loader.classList.add('hidden')
+        })
+
         const accessToken = localStorage.getItem('accessToken')
         const { disciplina_id: disciplina, perguntas, titulo } = await makeRequest({
             method: 'GET',
@@ -98,10 +102,6 @@ async function GabaritoPage() {
             })
         )
         content.appendChild(sidecardContainer)
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 
     } catch (error) {
         console.log(error)

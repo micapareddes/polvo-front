@@ -38,6 +38,11 @@ try {
     const navAlunosContainer = document.createElement('nav')
     const listaAlunosContainer = document.createElement('ul')
     const accessToken = localStorage.getItem('accessToken')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     const { alunos, data_fim, data_inicio, disciplina, orientacao, tempo, tentativas, titulo } = await makeRequest({ 
         url: API_ENDPOINTS.GET_QUIZ_INFO_FOR_PROFESSOR_BY_ID(quizId), 
         method: 'GET', 
@@ -162,11 +167,6 @@ try {
         if (!isClickInside) {
             dotMenuOptions.classList.add('hidden')
         }
-    })
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
     })
 
     if (localStorage.getItem('quizEditado')) {

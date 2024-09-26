@@ -21,6 +21,11 @@ async function DisciplinasPage() {
     const main = document.getElementById('main')
     const loader = document.querySelector('.loader-container')
     const header = document.createElement('div')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     const disciplinas = await getDisciplinas()
     const disciplinasFormatadas = parseDisciplinas(disciplinas)
     const quantidadeDisciplinas = disciplinas.length
@@ -77,8 +82,5 @@ async function DisciplinasPage() {
         closeToaster()
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 }
 DisciplinasPage()

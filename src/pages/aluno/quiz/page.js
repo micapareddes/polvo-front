@@ -15,6 +15,9 @@ async function QuizPage() {
     verifyUserAccess('aluno')
 
     const loader = document.querySelector('.loader-container')
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
     
     if (currentStep === '1') root.prepend(SidebarAluno())
     const step = {
@@ -22,9 +25,5 @@ async function QuizPage() {
         '2': Step2Page,
     }
     step[currentStep]()
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 }
 QuizPage()

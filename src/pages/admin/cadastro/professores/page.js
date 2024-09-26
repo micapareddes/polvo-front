@@ -141,6 +141,11 @@ async function CadastroProfessorPage() {
     const form = document.createElement('form')
     const inputsContainer = document.createElement('div')
     const buttonContainer = document.createElement('div')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     const disciplinas = await getDisciplinas()
     
     inputsContainer.className = 'grid md:grid-cols-2 gap-8 items-start mt-10'
@@ -212,8 +217,5 @@ async function CadastroProfessorPage() {
     form.onsubmit = handleSubmit
     form.oninput = handleChange
 
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 }
 CadastroProfessorPage()

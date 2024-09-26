@@ -20,6 +20,10 @@ async function PageDashboard() {
 
     root.prepend(SidebarAdmin())
     
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     try {
         const name = await makeRequest( { 
             url: API_ENDPOINTS.GET_USER_NAME, 
@@ -46,10 +50,6 @@ async function PageDashboard() {
                 linkPainel: item.linkPainel,
             })
         )
-    })
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
     })
 
 }

@@ -146,6 +146,11 @@ try {
     const form = document.createElement('form')
     const inputsContainer = document.createElement('div')
     const buttonContainer = document.createElement('div')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
     const disciplinasCadastradas = await getDisciplinas()
     const { nome, matricula, email, disciplinas } = await makeRequest({ 
         url: API_ENDPOINTS.GET_STUDENT_WITH_DISCIPLINA(getUrlParam('id')), 
@@ -255,10 +260,6 @@ try {
 
     form.onsubmit = handleSubmit
     form.oninput = handleChange
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 
 } catch (error) { //TODO: Adicionar tratamento de erro de make request
     console.log(error);

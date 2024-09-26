@@ -117,6 +117,11 @@ try {
     const form = document.createElement('form')
     const buttonContainer = document.createElement('div')
     const perguntasContainer = document.createElement('div')
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+    
     const quiz = await makeRequest({
         url: API_ENDPOINTS.GET_QUIZ(id), 
         method: 'GET', 
@@ -194,10 +199,6 @@ try {
     orientacoes.value = quiz.orientacao
 
     form.onsubmit = handleSubmit
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 
 }
 catch (error) { //TODO: Adicionar tratamento de erros
