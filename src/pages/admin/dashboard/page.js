@@ -15,6 +15,7 @@ async function PageDashboard() {
     removeOriginalValuesFromStorage()
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const painel = document.getElementById('painel')
 
     root.prepend(SidebarAdmin())

@@ -15,6 +15,7 @@ async function PageDashboard() {
         verifyUserAccess('aluno')
         const root = document.getElementById('root')
         const main = document.getElementById('main')
+        const loader = document.querySelector('.loader-container')
         const id = getUrlParam('id')
         const data = await makeRequest({
             url: API_ENDPOINTS.GET_QUIZ_INFO_BY_DISCIPLINA_ID(id), 

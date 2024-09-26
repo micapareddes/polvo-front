@@ -19,6 +19,7 @@ try {
     removeOriginalValuesFromStorage()
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const header = document.createElement('div')
     const accessToken = localStorage.getItem('accessToken')
     const professores = await makeRequest( { 

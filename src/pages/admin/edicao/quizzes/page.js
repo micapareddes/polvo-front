@@ -113,6 +113,7 @@ try {
 
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const form = document.createElement('form')
     const buttonContainer = document.createElement('div')
     const perguntasContainer = document.createElement('div')

@@ -34,6 +34,7 @@ async function GabaritoPage() {
         
         const root = document.getElementById('root')
         const main = document.getElementById('main')
+        const loader = document.querySelector('.loader-container')
         const content = document.createElement('div')
         const perguntasContainer = document.createElement('div')
         const sidecardContainer = document.createElement('div')

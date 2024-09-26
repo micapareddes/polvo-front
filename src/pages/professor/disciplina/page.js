@@ -19,6 +19,7 @@ async function DisciplinaPage() {
         const disciplinaId = getUrlParam('id')
         const root = document.getElementById('root')
         const main = document.getElementById('main')
+        const loader = document.querySelector('.loader-container')
         const contentContainer = document.createElement('div')
         const header = document.createElement('div')
         const accessToken = localStorage.getItem('accessToken')

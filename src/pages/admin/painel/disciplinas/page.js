@@ -19,6 +19,7 @@ async function DisciplinasPage() {
     removeOriginalValuesFromStorage()
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const header = document.createElement('div')
     const disciplinas = await getDisciplinas()
     const disciplinasFormatadas = parseDisciplinas(disciplinas)

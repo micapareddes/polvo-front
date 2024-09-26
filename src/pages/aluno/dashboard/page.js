@@ -13,6 +13,7 @@ async function PageDashboard() {
     verifyUserAccess('aluno')
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const nav = document.createElement('nav')
     const ul = document.createElement('ul')
 

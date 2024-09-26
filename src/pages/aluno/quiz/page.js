@@ -14,6 +14,8 @@ async function QuizPage() {
     if (!currentStep) navigateTo(ROUTES.ERROR404)
     verifyUserAccess('aluno')
 
+    const loader = document.querySelector('.loader-container')
+    
     if (currentStep === '1') root.prepend(SidebarAluno())
     const step = {
         '1': Step1Page,
