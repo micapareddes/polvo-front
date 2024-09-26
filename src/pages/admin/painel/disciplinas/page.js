@@ -75,5 +75,9 @@ async function DisciplinasPage() {
         ) 
         closeToaster()
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
 }
 DisciplinasPage()

@@ -153,5 +153,10 @@ async function CadastroDisciplinaPage() {
     
     form.onsubmit = handleSubmit
     form.oninput = handleChange
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+    
 }
 CadastroDisciplinaPage()

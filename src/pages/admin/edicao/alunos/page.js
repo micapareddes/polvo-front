@@ -255,7 +255,11 @@ try {
     form.onsubmit = handleSubmit
     form.oninput = handleChange
 
-} catch (error) {
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
+} catch (error) { //TODO: Adicionar tratamento de erro de make request
     console.log(error);
     if (error.status === 403) {
         alert('Acesso Proibido')

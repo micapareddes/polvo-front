@@ -81,11 +81,16 @@ function PageLogin() {
     const main = document.getElementById('main')
     const formContainer = LoginForm()
     const form = formContainer.querySelector('form')
+    const loader = document.querySelector('.loader-container')
 
     form.onsubmit = handleSubmit
     form.oninput = handleInput
 
     main.appendChild(formContainer)
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
 }
 
 PageLogin()

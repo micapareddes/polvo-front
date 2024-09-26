@@ -14,6 +14,7 @@ async function NovoQuizPage() {
     if (!currentStep) navigateTo(ROUTES.ERROR404)
     verifyUserAccess('professor')
     const root = document.getElementById('root')
+    const loader = document.querySelector('.loader-container')
 
     root.prepend(SidebarProfessor())
     const step = {
@@ -21,5 +22,9 @@ async function NovoQuizPage() {
         '2': Step2Page,
     }
     step[currentStep]()
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
 }
 NovoQuizPage()

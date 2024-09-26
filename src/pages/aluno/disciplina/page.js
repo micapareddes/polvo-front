@@ -43,6 +43,10 @@ async function PageDashboard() {
                 QuizTable(quizzes)
             )
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            loader.classList.add('hidden')
+        })
     
     } catch (error) {
         console.log(error);

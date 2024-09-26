@@ -220,8 +220,12 @@ try {
 
     form.onsubmit = handleSubmit
     form.oninput = handleChange
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
     
-} catch (error) {
+} catch (error) { //TODO: Adicionar tratamento de erros
     console.log(error);
     alert('Algo deu errado, tente novamente mais tarde...')
 }

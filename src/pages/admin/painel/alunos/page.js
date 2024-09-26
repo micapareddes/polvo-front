@@ -69,6 +69,11 @@ try {
             localStorage.removeItem('alunoAlterado')
         }
     }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
 } catch (error) {
     console.log(error);
     if (error.status === 403) {

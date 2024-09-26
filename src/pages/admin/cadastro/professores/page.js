@@ -210,5 +210,9 @@ async function CadastroProfessorPage() {
     
     form.onsubmit = handleSubmit
     form.oninput = handleChange
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
 }
 CadastroProfessorPage()

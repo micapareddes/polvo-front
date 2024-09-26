@@ -113,6 +113,7 @@ try {
 
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const form = document.createElement('form')
     const buttonContainer = document.createElement('div')
     const perguntasContainer = document.createElement('div')
@@ -168,6 +169,10 @@ try {
             const input = document.querySelector(`[key="${alternativa._id}"]`)
             input.value = alternativa.conteudo
         })
+    })
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
     })
 
     // Set quiz values on form

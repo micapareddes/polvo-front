@@ -193,8 +193,14 @@ try {
     orientacoes.value = quiz.orientacao
 
     form.onsubmit = handleSubmit
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
 }
-catch (error) {
-        
+catch (error) { //TODO: Adicionar tratamento de erros
+    console.log(error);
+    alert('Algo deu errado...')
 }
 } EditQuizPage()

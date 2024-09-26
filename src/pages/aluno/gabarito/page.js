@@ -97,6 +97,10 @@ async function GabaritoPage() {
         )
         content.appendChild(sidecardContainer)
 
+        document.addEventListener("DOMContentLoaded", function() {
+            loader.classList.add('hidden')
+        })
+
     } catch (error) {
         console.log(error)
     }

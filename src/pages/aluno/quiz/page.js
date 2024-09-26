@@ -20,5 +20,9 @@ async function QuizPage() {
         '2': Step2Page,
     }
     step[currentStep]()
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
 }
 QuizPage()

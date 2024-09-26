@@ -205,5 +205,10 @@ async function CadastroAlunoPage() {
     
     form.onsubmit = handleSubmit
     form.oninput = handleChange
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+    
 }
 CadastroAlunoPage()

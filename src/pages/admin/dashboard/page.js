@@ -47,6 +47,10 @@ async function PageDashboard() {
         )
     })
 
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
 }
 
 PageDashboard()

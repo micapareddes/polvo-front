@@ -63,6 +63,10 @@ async function PageDashboard() {
         main.appendChild(nav)
     }
 
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
 }
 
 PageDashboard()

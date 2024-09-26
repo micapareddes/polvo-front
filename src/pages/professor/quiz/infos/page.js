@@ -23,6 +23,7 @@ try {
     const quizId = getUrlParam('id')
     const root = document.getElementById('root')
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const content = document.createElement('div')
     const alunosContainer = document.createElement('div')
     const headingContainer = document.createElement('div')
@@ -161,6 +162,11 @@ try {
         if (!isClickInside) {
             dotMenuOptions.classList.add('hidden')
         }
+    })
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
     })
 
     if (localStorage.getItem('quizEditado')) {

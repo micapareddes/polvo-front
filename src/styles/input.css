@@ -12,9 +12,10 @@
         --tw-border-spacing-y: 0.5rem;
         border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
     }
+
     .hide-scrollbar::-webkit-scrollbar {
         display: none; /* Esconde o scrollbar para WebKit browsers (Chrome, Safari) */
-      }
+    }
       
     .hide-scrollbar {
         -ms-overflow-style: none; /* Esconde o scrollbar para Internet Explorer 10+ */
@@ -25,7 +26,21 @@
         opacity: 0;
         display: none;
         -webkit-appearance: none;
-    }    
+    }  
+
+    .loader {
+        width: 60px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #f03355;
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        animation: l1 2s infinite cubic-bezier(0.3,1,0,1);
+    }
+}
+
+@keyframes l1 {
+    33% {border-radius: 0;background: #514b82 ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
+    66% {border-radius: 0;background: #ffa516 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
 }
 
 :root {

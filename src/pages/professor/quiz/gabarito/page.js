@@ -36,6 +36,7 @@ async function GabaritoPage() {
         
         const root = document.getElementById('root')
         const main = document.getElementById('main')
+        const loader = document.querySelector('.loader-container')
         const content = document.createElement('div')
         const perguntasContainer = document.createElement('div')
         const sidecardContainer = document.createElement('div')
@@ -97,6 +98,10 @@ async function GabaritoPage() {
             })
         )
         content.appendChild(sidecardContainer)
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
 
     } catch (error) {
         console.log(error)

@@ -258,8 +258,14 @@ try {
 
     form.onsubmit = handleSubmit
     form.oninput = handleChange
-} catch (error) {
-    
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loader.classList.add('hidden')
+    })
+
+} catch (error) { //TODO: Adicionar tratamento de erros
+    console.log(error);
+    alert('Algo deu errado...')
 }
 }
 EdicaoCadastroPage()

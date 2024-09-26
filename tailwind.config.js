@@ -34,6 +34,9 @@ module.exports = {
         },
         '.root-container': {
           '@apply block md:grid lg:grid-cols-root-lg md:grid-cols-root-md bg-indigo-950 text-stone-900 h-screen overflow-y-scroll md:overflow-hidden': {},
+        },
+        '.loader-container': {
+          '@apply h-screen w-screen absolute bg-indigo-50 flex items-center justify-center z-30': {},
         }
       })
     }
