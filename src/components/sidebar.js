@@ -120,7 +120,7 @@ export function Sidebar({ size='lg', items=[], changePassword=true }) {
 
     sidebar.className = `block flex w-full flex-row justify-between md:flex-col p-6 md:h-screen md:p-0 box-border ${containerStyle[size]} bg-indigo-950`
 
-    div.className = 'flex flex-col w-full md:h-screen'
+    div.className = 'flex flex-col items-end w-full md:h-screen'
 
     smallLogo.src = '/src/img/logo-icon.svg'
     smallLogo.alt = 'Logo icone Polvo Branca'
@@ -132,7 +132,7 @@ export function Sidebar({ size='lg', items=[], changePassword=true }) {
     navList.className = 'flex flex-col h-full gap-6'
 
     hamburguerIcon.className = 'ph ph-list text-xl text-indigo-50'
-    hamburguerMenu.className = 'md:hidden text-end'
+    hamburguerMenu.className = 'md:hidden'
 
     footerItems.className = 'mt-auto flex items-start flex-col gap-6'
 
