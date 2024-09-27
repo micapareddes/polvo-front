@@ -217,14 +217,14 @@ try {
                             confirmarButtonName: 'Voltar',
                             onConfirm: () => {
                                 removeOriginalValuesFromStorage()
-                                history.back()
+                                navigateTo(ROUTES.ADMIN.PAINEL.ALUNOS)
                             }
                         })
                     )
                     return
                 }
                 removeOriginalValuesFromStorage()
-                history.back()
+                navigateTo(ROUTES.ADMIN.PAINEL.ALUNOS)
             }
         }),
         form

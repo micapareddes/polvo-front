@@ -223,12 +223,12 @@ try {
                         AlertDialog({
                             message: 'O cadastro não será salvo.',
                             confirmarButtonName: 'Voltar',
-                            onConfirm: () => history.back()
+                            onConfirm: () => navigateTo(ROUTES.ADMIN.PAINEL.PROFESSORES)
                         })
                     )
                     return
                 }
-                history.back()
+                navigateTo(ROUTES.ADMIN.PAINEL.PROFESSORES)
             }
         }),
         form

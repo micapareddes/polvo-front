@@ -198,14 +198,14 @@ try {
                             confirmarButtonName: 'Voltar',
                             onConfirm: () => {
                                 removeOriginalValuesFromStorage()
-                                history.back()
+                                navigateTo(ROUTES.ADMIN.PAINEL.DISCIPLINAS)
                             }
                         })
                     )
                     return
                 }
                 removeOriginalValuesFromStorage()
-                history.back()
+                navigateTo(ROUTES.ADMIN.PAINEL.DISCIPLINAS)
             },
             title: 'Edição da Disciplina', 
         }),

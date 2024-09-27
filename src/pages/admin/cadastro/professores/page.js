@@ -1,7 +1,8 @@
 // Functions
-import { API_ENDPOINTS } from '/src/utils/routes.js'
+import { API_ENDPOINTS, ROUTES } from '/src/utils/routes.js'
 import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
 import { makeRequest } from '/src/functions/makeRequest.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
 import { getDisciplinas } from '/src/pages/admin/service/getDisciplinas.js'
 import { cadastroUserValidation } from '/src/validations/cadastroUserValidation.js'
 
@@ -198,12 +199,12 @@ async function CadastroProfessorPage() {
                         AlertDialog({
                             message: 'O cadastro não será salvo.',
                             confirmarButtonName: 'Voltar',
-                            onConfirm: () => history.back()
+                            onConfirm: () => navigateTo(ROUTES.ADMIN.PAINEL.PROFESSORES)
                         })
                     )
                     return
                 }
-                history.back()
+                navigateTo(ROUTES.ADMIN.PAINEL.PROFESSORES)
             }
         }),
         form

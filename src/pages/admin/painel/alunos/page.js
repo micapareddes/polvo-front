@@ -33,7 +33,7 @@ try {
     header.append(        
         Heading({
             goBack: true, 
-            onGoBack: () => history.back(),
+            onGoBack: () => navigateTo(ROUTES.ADMIN.DASHBOARD),
             title: 'Alunos', 
             subtitle: `${quantidadeAlunos} cadastradas`,
             subtitleSize: 'lg',
