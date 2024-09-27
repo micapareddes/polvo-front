@@ -9,7 +9,6 @@ export function AlunoTable(rows) {
         },
         {
             content: 'Matricula',
-            className: 'pl-4'
         },
         {
             content: 'Disciplinas',

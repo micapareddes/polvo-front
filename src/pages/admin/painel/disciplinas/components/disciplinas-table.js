@@ -9,15 +9,12 @@ export function DisciplinasTable(rows) {
         },
         {
             content: 'Professor',
-            className: 'pl-4'
         },
         {
             content: 'Quiz',
-            className: 'pl-4'
         },
         {
             content: 'Ações',
-            className: 'pl-4'
         },
     ]
     const table = document.createElement('table')
