@@ -107,6 +107,7 @@ export async function Step2Page() {
         
         const root = document.getElementById('root')
         const main = document.getElementById('main')
+        const loader = document.querySelector('.loader-container')
         const form = document.createElement('form')
         const perguntasContainer = document.createElement('div')
         const sidecardContainer = document.createElement('div')
@@ -183,6 +184,7 @@ export async function Step2Page() {
                 }
             )
         })
+        loader.classList.add('hidden')
 
     } catch (error) {
         console.log(error)

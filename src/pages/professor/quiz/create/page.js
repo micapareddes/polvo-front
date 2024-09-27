@@ -14,7 +14,6 @@ async function NovoQuizPage() {
     if (!currentStep) navigateTo(ROUTES.ERROR404)
     verifyUserAccess('professor')
     const root = document.getElementById('root')
-    const loader = document.querySelector('.loader-container')
 
     document.addEventListener("DOMContentLoaded", function() {
         loader.classList.add('hidden')

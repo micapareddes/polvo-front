@@ -22,11 +22,6 @@ try {
     const loader = document.querySelector('.loader-container')
     const header = document.createElement('div')
     const accessToken = localStorage.getItem('accessToken')
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
-    
     const alunos = await makeRequest( { 
         url: API_ENDPOINTS.GET_ALL_STUDENTS_WITH_DISCIPLINAS, 
         method:'GET', 
@@ -75,6 +70,7 @@ try {
             localStorage.removeItem('alunoAlterado')
         }
     }
+    loader.classList.add('hidden')
 
 } catch (error) {
     console.log(error);

@@ -13,11 +13,6 @@ async function QuizPage() {
     const currentStep = getUrlParam('step')
     if (!currentStep) navigateTo(ROUTES.ERROR404)
     verifyUserAccess('aluno')
-
-    const loader = document.querySelector('.loader-container')
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
     
     if (currentStep === '1') root.prepend(SidebarAluno())
     const step = {

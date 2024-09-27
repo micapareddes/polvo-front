@@ -23,6 +23,7 @@ export async function Step1Page() {
             token: accessToken,
         })
         const main = document.getElementById('main')
+        const loader = document.querySelector('.loader-container')
         const container = document.createElement('div')
         const infoContainer = document.createElement('div')
         const sidecardContainer = document.createElement('div')
@@ -99,6 +100,8 @@ export async function Step1Page() {
         )
     
         localStorage.removeItem('remainingTime')
+        loader.classList.add('hidden')
+
     } catch (error) {
         console.log(error);
         alert('Algo deu errado... Encerre a sessão e tente novamente.')

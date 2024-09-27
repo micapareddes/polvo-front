@@ -202,6 +202,7 @@ export async function Step2Page() {
     if (!step) navigateTo(ROUTES.ERROR404)
 
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const form = document.createElement('form')
     const buttonsContainer = document.createElement('div')
     const headingContainer = document.createElement('div')
@@ -316,4 +317,6 @@ export async function Step2Page() {
     }
 
     form.onsubmit = handleSubmit
+
+    loader.classList.add('hidden')
 }

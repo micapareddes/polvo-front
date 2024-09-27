@@ -24,10 +24,6 @@ async function DisciplinaPage() {
         const header = document.createElement('div')
         const accessToken = localStorage.getItem('accessToken')
 
-        document.addEventListener("DOMContentLoaded", function() {
-            loader.classList.add('hidden')
-        })
-
         const { postados, rascunhos } = await makeRequest({ 
             url: API_ENDPOINTS.GET_QUIZZES_FOR_PROFESSOR_BY_DISCIPLINA_ID(disciplinaId), 
             method: 'GET', 
@@ -160,7 +156,8 @@ async function DisciplinaPage() {
             )
             closeToaster()
         }
-                
+        loader.classList.add('hidden')
+        
     } catch (error) {
         console.log(error);
         alert('Algo deu errado, tente novamente mais tarde...')

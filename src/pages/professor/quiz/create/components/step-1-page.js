@@ -296,6 +296,7 @@ try {
     const rascunhoId = getUrlParam('id')
 
     const main = document.getElementById('main')
+    const loader = document.querySelector('.loader-container')
     const form = document.createElement('form')
     const nameInputContainer = document.createElement('div')
     const disciplinaSelectContainer = document.createElement('div')
@@ -567,6 +568,8 @@ try {
         orientacoesInput.value = dadosPreenchidos.orientacoes
         tipoInput.value = dadosPreenchidos.tipo
     }
+    loader.classList.add('hidden')
+
 } catch (error) {
     console.log(error);
     alert('Algo deu errado, tente novamente mais tarde...')

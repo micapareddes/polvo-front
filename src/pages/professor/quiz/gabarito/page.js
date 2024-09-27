@@ -22,10 +22,6 @@ async function GabaritoPage() {
         const tentativaId = getUrlParam('tentativa')
         if (!tentativaId) navigateTo(ROUTES.ERROR404)
 
-        document.addEventListener("DOMContentLoaded", function() {
-            loader.classList.add('hidden')
-        })
-
         const accessToken = localStorage.getItem('accessToken')
         const { disciplina_id: disciplina, perguntas, titulo } = await makeRequest({
             method: 'GET',
@@ -76,19 +72,21 @@ async function GabaritoPage() {
             }),
             content,
         )
-        gabarito.forEach((item, index) => {
+        
+        gabarito.forEach((item, index) => { //FIXME:
             const alternativa = document.getElementById(`alternativa-${item.alternativa_id}`)
             const colorLetra = item.acertou ? 'green' : 'red'
+            console.log(alternativa);
             
-            if (!item.acertou) {
-                alternativa.classList.add('bg-red-100')
-            }
-            perguntasQuiz.push({
-                question: `Pergunta ${index + 1}`,
-                questionId: item.pergunta_id,
-                answer: alternativa.getAttribute('letra'),
-                color: colorLetra,
-            })
+            // if (!item.acertou) {
+            //     alternativa.classList.add('bg-red-100')
+            // }
+            // perguntasQuiz.push({
+            //     question: `Pergunta ${index + 1}`,
+            //     questionId: item.pergunta_id,
+            //     answer: alternativa.getAttribute('letra'),
+            //     color: colorLetra,
+            // })
             
         })
         sidecardContainer.appendChild(
@@ -102,8 +100,10 @@ async function GabaritoPage() {
             })
         )
         content.appendChild(sidecardContainer)
+        loader.classList.add('hidden')
 
     } catch (error) {
         console.log(error)
+        alert('Algo deu errado...')
     }
 } GabaritoPage()

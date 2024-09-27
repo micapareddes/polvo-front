@@ -41,10 +41,6 @@ async function GabaritoPage() {
         const header = document.createElement('div')
         let perguntasQuiz = [];
 
-        document.addEventListener("DOMContentLoaded", function() {
-            loader.classList.add('hidden')
-        })
-
         content.className = 'flex flex-row gap-20 mt-10 ml-11'
         perguntasContainer.className = 'space-y-16'
         header.className = 'flex items-center justify-between'
@@ -101,6 +97,7 @@ async function GabaritoPage() {
             }),
         )
         content.appendChild(sidecardContainer)
+        loader.classList.add('hidden')
 
     } catch (error) {
         console.log(error)

@@ -92,11 +92,6 @@ async function CadastroDisciplinaPage() {
     const form = document.createElement('form')
     const inputsContainer = document.createElement('div')
     const buttonContainer = document.createElement('div')
-
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
-
     const professores = await makeRequest( { 
         url: API_ENDPOINTS.GET_PROFESSORES, 
         method:'GET', 
@@ -159,6 +154,7 @@ async function CadastroDisciplinaPage() {
     
     form.onsubmit = handleSubmit
     form.oninput = handleChange
+    loader.classList.add('hidden')
 
 }
 CadastroDisciplinaPage()

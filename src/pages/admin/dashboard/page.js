@@ -19,10 +19,6 @@ async function PageDashboard() {
     const painel = document.getElementById('painel')
 
     root.prepend(SidebarAdmin())
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        loader.classList.add('hidden')
-    })
 
     try {
         const name = await makeRequest( { 
@@ -51,6 +47,8 @@ async function PageDashboard() {
             })
         )
     })
+
+    loader.classList.add('hidden')
 
 }
 
