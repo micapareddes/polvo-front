@@ -1,7 +1,7 @@
 export function cadastroUserValidation(data) {
-    const name = data.nome.length >= 3
-    const email = data.email.includes('@') && data.email.includes('.com')//TODO: melhorar validação
-    const matricula = data.matricula.length === 6 //TODO: validar que seja numeros
+    const name = data.nome.length >= 3 && !/\d/.test(data.nome)
+    const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)
+    const matricula = /^\d{6}$/.test(data.matricula)
     return {
         success: name && email && matricula,
         error: {

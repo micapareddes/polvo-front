@@ -53,19 +53,19 @@ async function handleSubmit(event) {
         if (error.emailValidation) {
             emailInput.classList.add('border-red-500')
             emailInputContainer.appendChild(
-                ErrorMessage('Formato de email inválido.')
+                ErrorMessage('Insira um email valido.')
             )
         }
         if (error.matriculaValidation) {
             matriculaInput.classList.add('border-red-500')
             matriculaInputContainer.appendChild(
-                ErrorMessage('Matricula deve ter extamanete 6 números.')
+                ErrorMessage('Insira uma matricula de 6 números.')
             )
         }
         if (error.nameValidation) {
             nameInput.classList.add('border-red-500')
             nameInputContainer.appendChild(
-                ErrorMessage('O nome deve conter pelo menos 3 caracteres.')
+                ErrorMessage('Insira um nome valido.')
             )
         }
 
@@ -97,6 +97,8 @@ async function handleSubmit(event) {
         closeToaster()
         
     } catch (error) {
+        console.log(error);
+        
         if (error.status === 1409) { 
             openToaster(
                 ErrorToaster({ message: 'Professor já foi cadastrado!' })
