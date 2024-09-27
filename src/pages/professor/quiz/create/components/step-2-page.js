@@ -284,7 +284,7 @@ export async function Step2Page() {
     const perguntasAlteradas = JSON.parse(localStorage.getItem('perguntas'))
     const perguntasRascunho = JSON.parse(localStorage.getItem('perguntasRascunho'))
     const perguntas = perguntasRascunho || perguntasAlteradas
-    if (perguntas.length > 0) {
+    if (perguntas && perguntas.length > 0) {
         const perguntasContainer = form.querySelectorAll('.pergunta-container')
 
         perguntasContainer.forEach((container) => {
