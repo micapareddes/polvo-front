@@ -16,6 +16,22 @@ import { ErrorMessage } from '/src/components/error-message.js'
 import { openDialog, AlertDialog } from '/src/components/dialog.js'
 import { MultiSelect } from '/src/components/multi-select.js'
 
+function handleInput(event) {
+    const form = event.target.form
+    const nameInput = form.querySelector('#name')
+    const matriculaInput = form.querySelector('#matricula')
+    const emailInput = form.querySelector('#email')
+    const submitButton = form.querySelector('#submit')
+    const errorMessage = form.querySelectorAll('#error-message')
+    
+    if (errorMessage) {
+        nameInput.classList.remove('border-red-500')
+        matriculaInput.classList.remove('border-red-500')
+        emailInput.classList.remove('border-red-500')
+        errorMessage.forEach((error) => error.remove())
+        submitButton.disabled = false
+    }
+}
 
 async function handleSubmit(event) {
     event.preventDefault()
@@ -119,23 +135,6 @@ async function handleSubmit(event) {
     }
 }
 
-function handleChange(event) {
-    const form = event.target.form
-    const nameInput = form.querySelector('#name')
-    const matriculaInput = form.querySelector('#matricula')
-    const emailInput = form.querySelector('#email')
-    const submitButton = form.querySelector('#submit')
-    const errorMessage = form.querySelectorAll('#error-message')
-    
-    if (errorMessage) {
-        nameInput.classList.remove('border-red-500')
-        matriculaInput.classList.remove('border-red-500')
-        emailInput.classList.remove('border-red-500')
-        errorMessage.forEach((error) => error.remove())
-        submitButton.disabled = false
-    }
-}
-
 async function CadastroProfessorPage() {
     verifyUserAccess('admin')
     const root = document.getElementById('root')
@@ -213,7 +212,7 @@ async function CadastroProfessorPage() {
     )
     
     form.onsubmit = handleSubmit
-    form.oninput = handleChange
+    form.oninput = handleInput
     loader.classList.add('hidden')
 
 }
