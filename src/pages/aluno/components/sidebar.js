@@ -16,6 +16,7 @@ export const painelItems = disciplinas.map((disciplina) => {
 })
 
 export function SidebarAluno(size='lg') {
+    const currentUrl = window.location.href
     return Sidebar({
         size: size,
         items: [
@@ -23,13 +24,14 @@ export function SidebarAluno(size='lg') {
                 icon: 'house',
                 title: 'Dashboard',
                 link: ROUTES.ALUNO.DASHBOARD,
-                active: true,
+                active: currentUrl.includes('dashboard'),
             },
             {
                 icon: 'books',
                 title: 'Disciplinas',
                 accordion: true,
                 accordionOptions: painelItems,
+                active: currentUrl.includes('disciplina'),
             },
         ],
         changePassword: true,

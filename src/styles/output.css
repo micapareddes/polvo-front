@@ -1654,6 +1654,11 @@ video {
   color: rgb(28 25 23 / var(--tw-text-opacity));
 }
 
+.text-yellow-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
+}
+
 .underline-offset-4{
   text-underline-offset: 4px;
 }
@@ -1916,6 +1921,11 @@ body{
 
 .peer[data-open="true"] ~ .peer-data-\[open\=\"true\"\]\:block{
   display: block;
+}
+
+.peer[data-active=true] ~ .peer-data-\[active\=true\]\:text-yellow-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){

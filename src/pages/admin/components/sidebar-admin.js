@@ -6,7 +6,7 @@ export const painelItems = [
         linkPainel: ROUTES.ADMIN.PAINEL.ALUNOS,
         linkCadastro: ROUTES.ADMIN.CADASTRO.ALUNOS,
     },{
-        name: 'Professor',
+        name: 'Professores',
         linkPainel: ROUTES.ADMIN.PAINEL.PROFESSORES,
         linkCadastro: ROUTES.ADMIN.CADASTRO.PROFESSORES,
     },{
@@ -16,6 +16,7 @@ export const painelItems = [
     },
 ]
 export function SidebarAdmin() {
+    const currentUrl = window.location.href
     return Sidebar({
         size: 'lg',
         items: [
@@ -23,13 +24,14 @@ export function SidebarAdmin() {
                 icon: 'house',
                 title: 'Dashboard',
                 link: ROUTES.ADMIN.DASHBOARD,
-                active: true,
+                active: currentUrl.includes('dashboard')
             },
             {
                 icon: 'books',
                 title: 'Painel',
                 accordion: true,
                 accordionOptions: painelItems,
+                active: currentUrl.includes('painel')
             },
         ],
         changePassword: true,
