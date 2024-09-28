@@ -16,6 +16,7 @@ import { Question } from '/src/components/question.js'
 import { Button } from '/src/components/button.js'
 import { PerguntaRespostaGabarito } from '/src/components/pergunta-resposta-gabarito.js'
 import { QuestionSidecard } from '/src/components/sidecard.js'
+import { Text } from '/src/components/fonts.js'
 
 async function GabaritoPage() {
     try {
@@ -59,6 +60,8 @@ async function GabaritoPage() {
                 })
             ) 
         })
+        console.log(perguntas_quiz);
+        
         content.appendChild(perguntasContainer)
         main.append(
             Heading({
@@ -70,13 +73,21 @@ async function GabaritoPage() {
             content,
         )
         gabarito.forEach((item, index) => {
+            const questoes = document.querySelectorAll('.question-container')
             const alternativa = document.getElementById(`alternativa-${item.alternativa_id}`)
-            console.log(alternativa);
-            
             const colorLetra = item.acertou ? 'green' : 'red'
+            console.log(questoes[index]);
             
-            if (alternativa && !item.acertou) {
-                alternativa.classList.add('bg-red-100')
+            if (!item.acertou) {
+                if (alternativa) alternativa.classList.add('bg-red-100')
+                questoes[index].appendChild(
+                    Text({
+                        text: 'Não pontuou nesta questão',
+                        tone: 'r-500',
+                        size: 'sm',
+                        bold: 'semibold',
+                    })
+                )
             }
             perguntasQuiz.push({
                 question: `Pergunta ${index + 1}`,

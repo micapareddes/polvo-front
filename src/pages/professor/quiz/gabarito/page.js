@@ -11,6 +11,7 @@ import { Heading } from '/src/components/heading.js'
 import { PerguntaRespostaGabarito } from '/src/components/pergunta-resposta-gabarito.js'
 import { QuestionSidecard } from '/src/components/sidecard.js'
 import { SidebarProfessor } from "../../components/sidebar-professor.js"
+import { Text } from '/src/components/fonts.js'
 
 async function GabaritoPage() {
     try {
@@ -74,20 +75,26 @@ async function GabaritoPage() {
         )
         
         gabarito.forEach((item, index) => { //FIXME:
+            const questoes = document.querySelectorAll('.question-container')
             const alternativa = document.getElementById(`alternativa-${item.alternativa_id}`)
             const colorLetra = item.acertou ? 'green' : 'red'
-            console.log(alternativa);
-            
-            // if (!item.acertou) {
-            //     alternativa.classList.add('bg-red-100')
-            // }
-            // perguntasQuiz.push({
-            //     question: `Pergunta ${index + 1}`,
-            //     questionId: item.pergunta_id,
-            //     answer: alternativa.getAttribute('letra'),
-            //     color: colorLetra,
-            // })
-            
+            if (!item.acertou) {
+                if (alternativa) alternativa.classList.add('bg-red-100')
+                questoes[index].appendChild(
+                    Text({
+                        text: 'Não pontuou nesta questão',
+                        tone: 'r-500',
+                        size: 'sm',
+                        bold: 'semibold',
+                    })
+                )
+            }
+            perguntasQuiz.push({
+                question: `Pergunta ${index + 1}`,
+                questionId: item.pergunta_id,
+                answer: alternativa ? alternativa.getAttribute('letra') : '-',
+                color: colorLetra,
+            })
         })
         sidecardContainer.appendChild(
             QuestionSidecard({
