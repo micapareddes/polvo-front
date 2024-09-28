@@ -9,9 +9,7 @@ import { getUrlParam } from '/src/functions/getUrlParam.js'
 
 // Components
 import { Heading } from '/src/components/heading.js'
-import { ErrorToaster, openToaster, closeToaster } from '/src/components/toaster.js'
 import { openDialog, ActionDialog, SuccessDialog } from '/src/components/dialog.js'
-import { Question } from '/src/components/question.js'
 import { Button } from '/src/components/button.js'
 import { PerguntaResposta } from '/src/components/pergunta-resposta.js'
 import { Timer } from './timer.js'
