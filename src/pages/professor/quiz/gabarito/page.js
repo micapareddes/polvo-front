@@ -24,12 +24,7 @@ async function GabaritoPage() {
         if (!tentativaId) navigateTo(ROUTES.ERROR404)
 
         const accessToken = localStorage.getItem('accessToken')
-        const { disciplina_id: disciplina, perguntas, titulo } = await makeRequest({
-            method: 'GET',
-            url: API_ENDPOINTS.GET_QUIZ_FOR_GABARITO_BY_ID(quizId),
-            token: accessToken,
-        })
-        const { nota, gabarito } = await makeRequest({
+        const { nota, gabarito, nome_quiz:titulo, disciplina_id:disciplina, perguntas_quiz:perguntas } = await makeRequest({
             method: 'GET',
             url: API_ENDPOINTS.GET_GABARITO(tentativaId),
             token: accessToken,
@@ -74,7 +69,7 @@ async function GabaritoPage() {
             content,
         )
         
-        gabarito.forEach((item, index) => { //FIXME:
+        gabarito.forEach((item, index) => {
             const questoes = document.querySelectorAll('.question-container')
             const alternativa = document.getElementById(`alternativa-${item.alternativa_id}`)
             const colorLetra = item.acertou ? 'green' : 'red'

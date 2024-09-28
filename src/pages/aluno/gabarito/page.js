@@ -60,7 +60,6 @@ async function GabaritoPage() {
                 })
             ) 
         })
-        console.log(perguntas_quiz);
         
         content.appendChild(perguntasContainer)
         main.append(
