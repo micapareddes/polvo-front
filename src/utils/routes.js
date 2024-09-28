@@ -50,6 +50,7 @@ export const API_ENDPOINTS = {
 
     GET_USER_TYPE: `${baseUrl}/api/usuarios/me`,
     GET_DISCIPLINAS: `${baseUrl}/api/disciplinas/cadastradas`,
+    GET_DISCIPLINAS_SEM_PROFESSOR: `${baseUrl}/api/disciplinas/sem_professor`,
     GET_DISCIPLINA_NAME: (id) => `${baseUrl}/api/disciplinas/name/${id}`,
     GET_DISCIPLINA: (id) => `${baseUrl}/api/disciplinas/${id}`,
     GET_DISCIPLINA_BY_ID: (id) => `${baseUrl}/api/disciplinas/${id}`, //FIXME:

@@ -3,7 +3,6 @@ import { API_ENDPOINTS, ROUTES } from '/src/utils/routes.js'
 import { verifyUserAccess } from '/src/auth/verifyUserAccess.js'
 import { makeRequest } from '/src/functions/makeRequest.js'
 import { navigateTo } from '/src/functions/navigateTo.js'
-import { getDisciplinas } from '/src/pages/admin/service/getDisciplinas.js'
 import { cadastroUserValidation } from '/src/validations/cadastroUserValidation.js'
 
 // Components
@@ -136,6 +135,7 @@ async function handleSubmit(event) {
 }
 
 async function CadastroProfessorPage() {
+try {
     verifyUserAccess('admin')
     const root = document.getElementById('root')
     const main = document.getElementById('main')
@@ -143,7 +143,12 @@ async function CadastroProfessorPage() {
     const form = document.createElement('form')
     const inputsContainer = document.createElement('div')
     const buttonContainer = document.createElement('div')
-    const disciplinas = await getDisciplinas()
+    const accessToken = localStorage.getItem('accessToken')
+    const disciplinas = await makeRequest({ 
+        url: API_ENDPOINTS.GET_DISCIPLINAS_SEM_PROFESSOR, 
+        method:'GET', 
+        token: accessToken
+    })
     
     inputsContainer.className = 'grid md:grid-cols-2 gap-8 items-start mt-10'
     buttonContainer.className = 'mt-auto text-center'
@@ -214,6 +219,10 @@ async function CadastroProfessorPage() {
     form.onsubmit = handleSubmit
     form.oninput = handleInput
     loader.classList.add('hidden')
-
+}
+catch(error) {
+    console.log(error)
+    alert('Algo deu errado...')
+}
 }
 CadastroProfessorPage()
