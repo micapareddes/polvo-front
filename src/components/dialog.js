@@ -10,10 +10,10 @@ function constructorDialog({ title, message, confirmarButtonName = 'Confirmar', 
     const cancelarButton = document.createElement('button')
     const confirmarButton = document.createElement('button')
 
-    container.className = 'fixed left-0 top-0 bg-indigo-950 bg-opacity-50 backdrop-blur-sm h-screen w-screen flex items-center justify-center'
+    container.className = 'fixed left-0 top-0 bg-indigo-950 bg-opacity-50 backdrop-blur-sm h-screen w-screen flex items-center justify-center px-4'
     container.id = 'dialog'
 
-    div.className = 'bg-neutral-50 rounded-3xl px-6 py-8'
+    div.className = 'bg-neutral-50 rounded-3xl px-6 py-8 max-w-full'
 
     buttonsContainer.className = 'text-end'
 
@@ -93,9 +93,9 @@ export function SuccessDialog({
         ariaLabel: `Botão de ${buttonName}`,
     })
 
-    container.className = 'fixed left-0 top-0 bg-indigo-950 bg-opacity-50 backdrop-blur-sm h-screen w-screen flex items-center justify-center'
+    container.className = 'fixed left-0 top-0 bg-indigo-950 bg-opacity-50 backdrop-blur-sm h-screen w-screen flex items-center justify-center px-4'
     headingContainer.className = 'flex flex-row gap-2 items-center'
-    div.className = 'bg-neutral-50 rounded-3xl px-6 pt-10 pb-10 flex flex-col items-center justify-center gap-4 min-w-96'
+    div.className = 'bg-neutral-50 rounded-3xl px-6 pt-10 pb-10 flex flex-col items-center justify-center gap-4 w-full max-w-96'
     icon.className = 'ph-fill ph-check-circle text-emerald-500 text-2xl'
     closeButton.className = 'ph ph-x text-stone-900 opacity-20 w-full text-end'
 

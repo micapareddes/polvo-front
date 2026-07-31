@@ -1,4 +1,4 @@
-export function PasswordInput({ className }) {
+export function PasswordInput({ id = 'password', labelName = 'Senha', className }) {
     const container = document.createElement('div')
     const inputContainer = document.createElement('div')
     const label = document.createElement('label')
@@ -6,19 +6,19 @@ export function PasswordInput({ className }) {
     const eyeButton = document.createElement('button')
     const eyeIcon = document.createElement('img')
 
-    container.id = 'field-password'
+    container.id = `field-${id}`
     inputContainer.className = 'flex w-full px-2 py-3 rounded-md bg-neutral-100 border border-neutral-200 mt-3 has-[:focus]:ring-2 has-[:focus]:ring-yellow-400'
 
-    inputContainer.id = 'password-container'
-    
+    inputContainer.id = `${id}-container`
+
     input.type = 'password'
-    input.name = 'password'
-    input.id = 'password'
+    input.name = id
+    input.id = id
     input.placeholder = '••••••••'
     input.className = `peer w-full mr-2 bg-transparent focus:outline-none ${className}`
 
-    label.textContent = 'Senha'
-    label.htmlFor = 'password'
+    label.textContent = labelName
+    label.htmlFor = id
     label.className = 'block'
 
     eyeIcon.src = '/src/img/icones/eye.svg'

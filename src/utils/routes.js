@@ -3,6 +3,7 @@ import { baseUrl } from "./baseUrl.js"
 export const ROUTES = {
     LOGIN: '/src/pages/login/index.html',
     ERROR404: '/src/pages/404/index.html',
+    TROCAR_SENHA: '/src/pages/trocar-senha/index.html',
     ADMIN: {
         DASHBOARD: '/src/pages/admin/dashboard/index.html',
         PAINEL: {
@@ -77,6 +78,7 @@ export const API_ENDPOINTS = {
     GET_DISCIPLINAS_PROFESSOR: `${baseUrl}/api/disciplinas/professor`,
     GET_DISCIPLINAS_ALUNO: `${baseUrl}/api/alunos_disciplinas/get`,
     PATCH_USER: (id) => `${baseUrl}/api/usuarios/user/${id}`,
+    PATCH_ALTERAR_SENHA: `${baseUrl}/api/usuarios/alterar_senha`,
     GET_PROFESSORES: `${baseUrl}/api/usuarios/professores`,
     GET_PROFESSOR_WITH_DISCIPLINA: (id) => `${baseUrl}/api/usuarios/professor_disciplina/${id}`,
 

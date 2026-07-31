@@ -2,6 +2,8 @@ import { AlertDialog, openDialog } from './dialog.js'
 import { LogoLado } from './logo-lado.js'
 import { signOut } from '../auth/singOut.js'
 import { removeOriginalValuesFromStorage } from '/src/pages/admin/functions/removeOriginalValuesFromStorage.js'
+import { ROUTES } from '/src/utils/routes.js'
+import { navigateTo } from '/src/functions/navigateTo.js'
 
 function Item({ 
     phosphor='question', title, link=null, onClick=null, accordion=false, accordionOptions=[], active=false 
@@ -41,8 +43,8 @@ function Item({
         arrow.className = 'ph ph-caret-right text-indigo-50 font-base enabled:group-hover:rotate-90 transition-all duration-200'
 
         options.className = `hidden
-            flex flex-col items-start justify-center pt-6 pl-8 space-y-4
-            [&_a]:block [&_a]:cursor-pointer [&_a]:text-indigo-50 [&_a]:text-xs
+            flex flex-col items-start justify-center pt-6 pl-8 pr-4 space-y-4 w-full
+            [&_a]:block [&_a]:w-full [&_a]:truncate [&_a]:cursor-pointer [&_a]:text-indigo-50 [&_a]:text-xs
         `
 
         accordionOptions.forEach((option) => {
@@ -51,9 +53,11 @@ function Item({
 
             link.textContent = option.name
             link.href = option.linkPainel
+            link.title = option.name
 
             link.className = 'hover:text-yellow-200'
 
+            li.className = 'w-full'
             li.appendChild(link)
             options.appendChild(li)
         })
@@ -111,9 +115,7 @@ export function Sidebar({ size='lg', items=[], changePassword=true }) {
             title: size === 'lg'? 'Trocar senha' : '',
             active: false,
             link: null,
-            onClick: () => {
-                console.log('Trocar senha');
-            },
+            onClick: () => navigateTo(ROUTES.TROCAR_SENHA),
         })
         footerItems.appendChild(trocarSenha)
     }

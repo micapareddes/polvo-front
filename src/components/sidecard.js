@@ -56,7 +56,7 @@ export function QuestionSidecard({
     })
 
     container.id = 'sidecard'
-    container.className = 'flex flex-col items-center w-[320px]'
+    container.className = 'flex flex-col items-center w-full max-w-[320px]'
     perguntasContainer.className = 'flex flex-col gap-4 mb-8'
 
     questions.forEach((pergunta) => {

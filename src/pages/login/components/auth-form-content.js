@@ -13,16 +13,29 @@ export function AuthFormContent() {
     })
     const password = PasswordInput({})
     const forgotPasswordButtonContainer = document.createElement('div')
+    const forgotPasswordMessage = document.createElement('p')
     const forgotPasswordButton = Button({
-        link: '/recuperar-senha',
         variant: 'ghost',
         title: 'Esqueceu a senha ou deseja trocar?',
         size: 'regular',
-        ariaLabel: 'Botão para trocar a senha'
+        ariaLabel: 'Botão para trocar a senha',
+        disabled: true,
     })
+
     container.className = 'flex flex-col gap-8 w-full'
-    forgotPasswordButtonContainer.className = 'flex justify-center'
-    forgotPasswordButtonContainer.appendChild(forgotPasswordButton)
+    forgotPasswordButtonContainer.className = 'relative flex justify-center'
+
+    forgotPasswordMessage.textContent = 'Em breve'
+    forgotPasswordMessage.className = 'hidden absolute -top-8 p-2 rounded bg-neutral-100 border border-neutral-300 text-xs text-stone-500'
+
+    forgotPasswordButtonContainer.addEventListener('mouseenter', () => {
+        forgotPasswordMessage.classList.remove('hidden')
+    })
+    forgotPasswordButtonContainer.addEventListener('mouseleave', () => {
+        forgotPasswordMessage.classList.add('hidden')
+    })
+
+    forgotPasswordButtonContainer.append(forgotPasswordMessage, forgotPasswordButton)
     container.append(credentialsInput, password, forgotPasswordButtonContainer)
 
     return container
