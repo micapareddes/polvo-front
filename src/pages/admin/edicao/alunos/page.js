@@ -128,8 +128,24 @@ function handleChange(event) { //TODO: Testar se elimina todos os erros
     if (errorMessage) {
         errorMessage.remove()
         input.classList.remove('border-red-500')
-        submitButton.disabled = false
     }
+
+    const nameInput = form.querySelector('#name')
+    const matriculaInput = form.querySelector('#matricula')
+    const emailInput = form.querySelector('#email')
+    const multiselect = form.querySelector('#multiselect')
+    const selectedDisciplinas = multiselect.querySelectorAll('#option:checked')
+    const editedDisciplinas = Array.from(selectedDisciplinas).map((disciplina) => {
+        return {
+            nome: disciplina.getAttribute('data-label'),
+            id: disciplina.value,
+        }
+    })
+    const { nome, matricula, email, disciplinas } = obtainOriginalValuesFromStorage()
+    const dataMudou = nome !== nameInput.value.trim() || email !== emailInput.value.trim() || matricula !== matriculaInput.value.trim()
+    const disciplinasMudaram = !arraysSaoIguais(editedDisciplinas, disciplinas)
+
+    submitButton.disabled = !(dataMudou || disciplinasMudaram)
 }
 
 async function EdicaoCadastroPage() {
@@ -189,6 +205,7 @@ try {
             size: 'lg',
             title: 'Cadastrar',
             type: 'submit',
+            disabled: true,
             ariaLabel: 'Botão de submit para cadastrar'
         })
     )
@@ -255,6 +272,7 @@ try {
 
     form.onsubmit = handleSubmit
     form.oninput = handleChange
+    form.onchange = handleChange
     loader.classList.add('hidden')
 
 } catch (error) { //TODO: Adicionar tratamento de erro de make request

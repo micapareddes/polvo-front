@@ -23,7 +23,8 @@ export function PasswordInput({ id = 'password', labelName = 'Senha', className 
 
     eyeIcon.src = '/src/img/icones/eye.svg'
 
-    eyeButton.setAttribute('aria-label', 'Mostrar ou ocultar senha') 
+    eyeButton.type = 'button'
+    eyeButton.setAttribute('aria-label', 'Mostrar ou ocultar senha')
     eyeButton.addEventListener("click", (event) => {
         event.preventDefault()
 
