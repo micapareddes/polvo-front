@@ -2185,9 +2185,9 @@ body{
   white-space: nowrap;
 }
 
-.\[\&_a\]\:text-base a{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.\[\&_a\]\:text-sm a{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .\[\&_a\]\:font-medium a{
