@@ -25,11 +25,11 @@ export function Heading({ title='Titulo', subtitle='', subtitleSize='lg', goBack
         const leftArrow = document.createElement('i')
         const div = document.createElement('div')
 
-        div.className = 'flex justify-start w-8 h-8 mr-3'
+        div.className = 'row-span-2 flex items-center justify-center w-8 h-8 mr-3'
 
         leftArrow.className = 'ph ph-caret-left text-2xl'
 
-        goBackButton.className = 'row-span-2 hover:bg-neutral-200 rounded-md p-1'
+        goBackButton.className = 'flex items-center justify-center w-full h-full hover:bg-neutral-200 rounded-md p-1'
         goBackButton.appendChild(leftArrow)
         div.appendChild(goBackButton)
 

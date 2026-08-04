@@ -17,15 +17,12 @@ export function SidebarProfessor(size='lg') {
             {
                 icon: 'house',
                 title: 'Dashboard',
-                link: ROUTES.PROFESSOR.DASHBOARD,
-                active: currentUrl.includes('dashboard'),
-            },
-            {
-                icon: 'books',
-                title: 'Painel',
                 accordion: true,
-                accordionOptions: painelItems,
-                active: currentUrl.includes('disciplina')
+                accordionOptions: [
+                    { name: 'Visão geral', linkPainel: ROUTES.PROFESSOR.DASHBOARD },
+                    ...painelItems,
+                ],
+                active: currentUrl.includes('dashboard') || currentUrl.includes('disciplina')
             },
             {
                 icon: 'file-plus',

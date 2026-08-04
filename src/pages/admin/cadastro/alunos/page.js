@@ -6,6 +6,7 @@ import { navigateTo } from '/src/functions/navigateTo.js'
 import { cadastroUserValidation } from '/src/validations/cadastroUserValidation.js'
 import { getDisciplinas } from '/src/pages/admin/service/getDisciplinas.js'
 import { resetMultiselect } from '/src/functions/resetMultiselect.js'
+import { formatMatricula } from '/src/functions/formatMatricula.js'
 
 // Components
 import { SidebarAdmin } from '/src/pages/admin/components/sidebar-admin.js'
@@ -20,18 +21,29 @@ import { ErrorMessage } from '/src/components/error-message.js'
 function handleChange(event) {
     const form = event.target.form
     const nameInput = form.querySelector('#name')
+    const nameInputContainer = form.querySelector('#name-container')
     const matriculaInput = form.querySelector('#matricula')
     const emailInput = form.querySelector('#email')
     const submitButton = form.querySelector('#submit')
-    const errorMessage = form.querySelectorAll('#error-message')
-    
-    if (errorMessage) {
-        nameInput.classList.remove('border-red-500')
-        matriculaInput.classList.remove('border-red-500')
-        emailInput.classList.remove('border-red-500')
-        errorMessage.forEach((error) => error.remove())
-        submitButton.disabled = false
+
+    matriculaInput.value = formatMatricula(matriculaInput.value)
+
+    form.querySelectorAll('#error-message').forEach((error) => error.remove())
+    nameInput.classList.remove('border-red-500')
+    matriculaInput.classList.remove('border-red-500')
+    emailInput.classList.remove('border-red-500')
+
+    const nameHasSobrenome = /\S+\s+\S+/.test(nameInput.value.trim())
+
+    if (nameInput.value && !nameHasSobrenome) {
+        nameInput.classList.add('border-red-500')
+        nameInputContainer.appendChild(
+            ErrorMessage('Insira nome e sobrenome.')
+        )
     }
+
+    const requiredFilled = nameInput.value && matriculaInput.value && emailInput.value
+    submitButton.disabled = !(requiredFilled && nameHasSobrenome)
 }
 async function handleSubmit(event) {
     event.preventDefault()
@@ -106,6 +118,7 @@ async function handleSubmit(event) {
         })
         form.reset()
         resetMultiselect(selectedDisciplinas)
+        submitButton.disabled = true
         openToaster(
             SuccessToaster({
                 message: `Aluno "${data.nome}" cadastrado!`
@@ -146,9 +159,9 @@ async function CadastroAlunoPage() {
     root.prepend(SidebarAdmin())
     inputsContainer.append(
         TextInput({
-            id: 'name', 
-            labelName: 'Nome',
-            placeholder: 'Nome do aluno' 
+            id: 'name',
+            labelName: 'Nome completo',
+            placeholder: 'Nome do aluno'
         }),
         TextInput({
             id: 'matricula', 
@@ -174,14 +187,15 @@ async function CadastroAlunoPage() {
             size: 'lg',
             title: 'Cadastrar',
             type: 'submit',
+            disabled: true,
             ariaLabel: 'Botão de submit para cadastrar'
         })
     )
     form.append(inputsContainer, buttonContainer)
-    main.append(    
+    main.append(
         Heading({
-            goBack: true, 
-            title: 'Cadastro do Aluno', 
+            goBack: true,
+            title: 'Cadastro do Aluno',
             onGoBack: () => {
                 const multiselect = form.querySelector('#multiselect')
                 const selectedDisciplinas = multiselect.querySelectorAll('#option:checked')

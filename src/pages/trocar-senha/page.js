@@ -15,6 +15,7 @@ import { ErrorMessage } from '/src/components/error-message.js'
 
 function handleChange(event) {
     const form = event.target.form
+    const senhaAtualInput = form.querySelector('#senhaAtual')
     const senhaAtualContainer = form.querySelector('#senhaAtual-container')
     const novaSenhaContainer = form.querySelector('#novaSenha-container')
     const confirmarSenhaContainer = form.querySelector('#confirmarSenha-container')
@@ -26,16 +27,19 @@ function handleChange(event) {
     senhaAtualContainer.classList.remove('border-red-500')
     novaSenhaContainer.classList.remove('border-red-500')
     confirmarSenhaContainer.classList.remove('border-red-500')
-    submitButton.disabled = false
 
-    if (novaSenhaInput.value && confirmarSenhaInput.value && novaSenhaInput.value !== confirmarSenhaInput.value) {
+    const senhasCoincidem = novaSenhaInput.value === confirmarSenhaInput.value
+
+    if (novaSenhaInput.value && confirmarSenhaInput.value && !senhasCoincidem) {
         novaSenhaContainer.classList.add('border-red-500')
         confirmarSenhaContainer.classList.add('border-red-500')
         form.querySelector('#field-confirmarSenha').appendChild(
             ErrorMessage('As senhas não coincidem.')
         )
-        submitButton.disabled = true
     }
+
+    const requiredFilled = senhaAtualInput.value && novaSenhaInput.value && confirmarSenhaInput.value
+    submitButton.disabled = !(requiredFilled && senhasCoincidem)
 }
 
 async function handleSubmit(event) {
@@ -86,6 +90,7 @@ async function handleSubmit(event) {
             data: { senhaAtual: data.senhaAtual, novaSenha: data.novaSenha },
         })
         form.reset()
+        submitButton.disabled = true
         openToaster(
             SuccessToaster({ message: 'Senha alterada com sucesso!' })
         )
@@ -154,6 +159,7 @@ async function TrocarSenhaPage() {
             size: 'lg',
             title: 'Salvar',
             type: 'submit',
+            disabled: true,
             ariaLabel: 'Botão de submit para trocar senha'
         })
     )

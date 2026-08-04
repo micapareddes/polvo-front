@@ -1515,6 +1515,10 @@ video {
   padding-top: 2.5rem;
 }
 
+.pt-4{
+  padding-top: 1rem;
+}
+
 .pt-5{
   padding-top: 1.25rem;
 }
@@ -1577,6 +1581,10 @@ video {
 
 .font-bold{
   font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .font-normal{
@@ -2157,11 +2165,6 @@ body{
     font-size: 1.5rem;
     line-height: 2rem;
   }
-
-  .lg\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 .\[\&_a\]\:block a{
@@ -2182,9 +2185,13 @@ body{
   white-space: nowrap;
 }
 
-.\[\&_a\]\:text-xs a{
-  font-size: 0.75rem;
-  line-height: 1rem;
+.\[\&_a\]\:text-base a{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.\[\&_a\]\:font-medium a{
+  font-weight: 500;
 }
 
 .\[\&_a\]\:text-indigo-50 a{

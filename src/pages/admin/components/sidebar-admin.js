@@ -23,15 +23,12 @@ export function SidebarAdmin() {
             {
                 icon: 'house',
                 title: 'Dashboard',
-                link: ROUTES.ADMIN.DASHBOARD,
-                active: currentUrl.includes('dashboard')
-            },
-            {
-                icon: 'books',
-                title: 'Painel',
                 accordion: true,
-                accordionOptions: painelItems,
-                active: currentUrl.includes('painel')
+                accordionOptions: [
+                    { name: 'Visão geral', linkPainel: ROUTES.ADMIN.DASHBOARD },
+                    ...painelItems,
+                ],
+                active: currentUrl.includes('dashboard') || currentUrl.includes('painel')
             },
         ],
         changePassword: true,

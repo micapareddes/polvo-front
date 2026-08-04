@@ -31,7 +31,7 @@ export function Button(
 
     if (icon) {
         const iconImg = document.createElement('i')
-        iconImg.className = `ph ph-${icon}`
+        iconImg.className = `ph ph-${icon} text-base`
   
         button.prepend(iconImg)
         button.classList.add('flex', 'items-center', 'justify-center', 'gap-2')

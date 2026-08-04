@@ -73,7 +73,7 @@ function handleInput() {
 
     if (passwordErrorMessage) passwordErrorMessage.remove()
 
-    submitButton.disabled = false
+    submitButton.disabled = !(form.credentials.value && form.password.value)
 }
 
 function PageLogin() {
@@ -83,6 +83,7 @@ function PageLogin() {
     const form = formContainer.querySelector('form')
     const loader = document.querySelector('.loader-container')
 
+    form.querySelector('#submit').disabled = true
     form.onsubmit = handleSubmit
     form.oninput = handleInput
 

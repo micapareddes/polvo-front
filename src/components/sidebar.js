@@ -29,7 +29,7 @@ function Item({
     icon.classList = `ph ph-${phosphor} text-indigo-50 group-data-[active=true]:text-yellow-200 md:group-data-[active=true]:text-indigo-50 text-sm md:text-xl`
 
     text.textContent = title
-    text.classList = 'block md:hidden lg:block text-xs lg:text-sm text-indigo-50 group-data-[active=true]:text-yellow-200 md:group-data-[active=true]:text-indigo-50 group-data-[active=true]:font-semibold'
+    text.classList = 'block md:hidden lg:block text-base font-medium text-indigo-50 group-data-[active=true]:text-yellow-200 md:group-data-[active=true]:text-indigo-50 group-data-[active=true]:font-semibold'
 
     action.append(icon, text)
     container.appendChild(action)
@@ -43,8 +43,8 @@ function Item({
         arrow.className = 'ph ph-caret-right text-indigo-50 font-base enabled:group-hover:rotate-90 transition-all duration-200'
 
         options.className = `hidden
-            flex flex-col items-start justify-center pt-6 pl-8 pr-4 space-y-4 w-full
-            [&_a]:block [&_a]:w-full [&_a]:truncate [&_a]:cursor-pointer [&_a]:text-indigo-50 [&_a]:text-xs
+            flex flex-col items-start justify-center pt-4 pl-8 pr-4 space-y-3 w-full
+            [&_a]:block [&_a]:w-full [&_a]:truncate [&_a]:cursor-pointer [&_a]:text-indigo-50 [&_a]:text-base [&_a]:font-medium
         `
 
         accordionOptions.forEach((option) => {

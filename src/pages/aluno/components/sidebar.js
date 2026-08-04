@@ -23,15 +23,12 @@ export function SidebarAluno(size='lg') {
             {
                 icon: 'house',
                 title: 'Dashboard',
-                link: ROUTES.ALUNO.DASHBOARD,
-                active: currentUrl.includes('dashboard'),
-            },
-            {
-                icon: 'books',
-                title: 'Disciplinas',
                 accordion: true,
-                accordionOptions: painelItems,
-                active: currentUrl.includes('disciplina'),
+                accordionOptions: [
+                    { name: 'Visão geral', linkPainel: ROUTES.ALUNO.DASHBOARD },
+                    ...painelItems,
+                ],
+                active: currentUrl.includes('dashboard') || currentUrl.includes('disciplina'),
             },
         ],
         changePassword: true,

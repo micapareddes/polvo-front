@@ -24,8 +24,8 @@ function handleChange(event) {
     if (errorMessage) {
         errorMessage.remove()
         input.classList.remove('border-red-500')
-        submitButton.disabled = false
     }
+    submitButton.disabled = !input.value
 }
 async function handleSubmit(event) {
     event.preventDefault()
@@ -62,6 +62,7 @@ async function handleSubmit(event) {
         })
         form.reset()
         select.selectedIndex = 0
+        submitButton.disabled = true
         openToaster(
             SuccessToaster({
                 message: `Disciplina "${nomeDisciplina}" cadastrada!`
@@ -128,6 +129,7 @@ async function CadastroDisciplinaPage() {
             size: 'lg',
             title: 'Cadastrar',
             type: 'submit',
+            disabled: true,
             ariaLabel: 'Botão de submit para cadastrar'
         })
     )
